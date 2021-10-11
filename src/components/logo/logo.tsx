@@ -1,5 +1,5 @@
-import { LogoBox, LogoImg, LogoTitle, LogoSpan } from './logo-styled'
-import MarkeeLogo from './markee-logo.png'
+import { LogoBox, LogoImg } from './logo-styled'
+import LogoTimeSheet from './logo.svg'
 
 function Logo() {
   function handleClick() {
@@ -9,19 +9,12 @@ function Logo() {
   return (
     <LogoBox>
       <LogoImg
-        src={MarkeeLogo}
-        alt="Markee"
+        src={LogoTimeSheet}
+        alt="Timesheet"
         onClick={() => {
           handleClick()
         }}
       />
-      <LogoTitle
-        onClick={() => {
-          handleClick()
-        }}
-      >
-        markee<LogoSpan>.</LogoSpan>
-      </LogoTitle>
     </LogoBox>
   )
 }
