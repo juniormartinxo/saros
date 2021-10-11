@@ -1,5 +1,5 @@
 {
-  "name": "TimeSheet",
+  "name": "timesheet",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -64,8 +64,6 @@
   "devDependencies": {
     "@babel/preset-env": "^7.15.8",
     "@babel/preset-react": "^7.14.5",
-    "babel-jest": "^27.2.5",
-    "jest": "^27.2.5",
     "react-test-renderer": "^17.0.2"
   }
 }
