@@ -1,9 +1,15 @@
-function header() {
+import { HeaderStyled, TopbarStyled, NavbarStyled } from './header-styled'
+import { Logo } from '../logo'
+
+function Header() {
   return (
-    <header>
-      <h1>Header</h1>
-    </header>
+    <HeaderStyled>
+      <TopbarStyled>
+        <Logo />
+      </TopbarStyled>
+      <NavbarStyled>NavbarStyled</NavbarStyled>
+    </HeaderStyled>
   )
 }
 
-export { header }
+export { Header }

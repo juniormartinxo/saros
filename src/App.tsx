@@ -1,12 +1,8 @@
-import { Logo } from './components/logo'
+import { Header } from './components/header'
 import './App.css'
 
 function App() {
-  return (
-    <div className="App">
-      <Logo />
-    </div>
-  )
+  return <Header />
 }
 
 export default App

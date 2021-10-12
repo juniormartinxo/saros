@@ -1,11 +1,16 @@
-import { header } from './header'
+import { HeaderStyled, TopbarStyled, NavbarStyled } from './header-styled'
+import { Logo } from '../logo'
+import { Header } from './header'
 
-describe('header', () => {
-  it('deve retorna header', () => {
-    expect(header()).toEqual(
-      <header>
-        <h1>Header</h1>
-      </header>,
+describe('Header', () => {
+  it('deve retornar o header', () => {
+    expect(Header()).toEqual(
+      <HeaderStyled>
+        <TopbarStyled>
+          <Logo />
+        </TopbarStyled>
+        <NavbarStyled>NavbarStyled</NavbarStyled>
+      </HeaderStyled>,
     )
   })
 })
