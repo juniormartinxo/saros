@@ -8,7 +8,7 @@ const LogoBox = styled.div`
 `
 
 const LogoImg = styled.img`
-  width: 300px;
+  height: 19px;
 `
 
 export { LogoBox, LogoImg }

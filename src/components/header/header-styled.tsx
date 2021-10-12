@@ -1,9 +1,6 @@
 import styled from 'styled-components/macro'
 
 const HeaderStyled = styled.header`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0.5rem 1rem;
 `
 
@@ -15,7 +12,7 @@ const TopbarStyled = styled.div`
 `
 
 const NavbarStyled = styled.nav`
-  display: flex;
+  display: block;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;

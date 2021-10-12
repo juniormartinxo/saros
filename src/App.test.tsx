@@ -1,6 +1,12 @@
 import { Header } from './components/header'
-import App from './App'
+import GlobalStyle from './resources/global-style'
+import { App } from './app'
 
 test('renders learn react link', () => {
-  expect(App()).toEqual(<Header />)
+  expect(App()).toEqual(
+    <>
+      <GlobalStyle />
+      <Header />
+    </>,
+  )
 })

@@ -1,21 +1,36 @@
+import {
+  TopNavbarStyled,
+  TopMenuStyled,
+  TopMenuItemStyled,
+  TopMenuItemLinkStyled,
+} from './topnavbar-styled'
 import { TopNavbar } from './topnavbar'
+import { Logo } from '../logo'
 
 describe('TopNavbar', () => {
   it('deve retornar o TopNavbar', () => {
     expect(TopNavbar()).toEqual(
-      <nav>
-        <ul>
-          <li key={1}>
-            <a href="/">Página inicial</a>
-          </li>
-          <li key={2}>
-            <a href="/">Sobre</a>
-          </li>
-          <li key={3}>
-            <a href="/">Contato</a>
-          </li>
-        </ul>
-      </nav>,
+      <TopNavbarStyled>
+        <TopMenuStyled>
+          <TopMenuItemStyled key={0}>
+            <Logo />
+          </TopMenuItemStyled>
+
+          <TopMenuItemStyled key={1}>
+            <TopMenuItemLinkStyled href="/">
+              Página inicial
+            </TopMenuItemLinkStyled>
+          </TopMenuItemStyled>
+
+          <TopMenuItemStyled key={2}>
+            <TopMenuItemLinkStyled href="/">Sobre</TopMenuItemLinkStyled>
+          </TopMenuItemStyled>
+
+          <TopMenuItemStyled key={3}>
+            <TopMenuItemLinkStyled href="/">Contato</TopMenuItemLinkStyled>
+          </TopMenuItemStyled>
+        </TopMenuStyled>
+      </TopNavbarStyled>,
     )
   })
 })

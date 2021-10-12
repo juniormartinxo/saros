@@ -1,13 +1,11 @@
-import { HeaderStyled, TopbarStyled, NavbarStyled } from './header-styled'
-import { Logo } from '../logo'
+import { TopNavbar } from '../topnavbar'
+import { HeaderStyled, NavbarStyled } from './header-styled'
 
 function Header() {
   return (
     <HeaderStyled>
-      <TopbarStyled>
-        <Logo />
-      </TopbarStyled>
       <NavbarStyled>NavbarStyled</NavbarStyled>
+      <TopNavbar />
     </HeaderStyled>
   )
 }

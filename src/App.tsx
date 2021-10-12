@@ -1,8 +1,13 @@
 import { Header } from './components/header'
-import './App.css'
+import GlobalStyle from './resources/global-style'
 
 function App() {
-  return <Header />
+  return (
+    <>
+      <GlobalStyle />
+      <Header />
+    </>
+  )
 }
 
-export default App
+export { App }

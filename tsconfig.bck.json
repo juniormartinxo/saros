@@ -1,5 +1,4 @@
 {
-  "extends": "./paths.tsconfig.json",
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -16,11 +15,15 @@
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "rootDirs": [
+      "./src"
+    ],
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": "./src"
+    "jsx": "react-jsx"
   },
   "include": [
     "src"
