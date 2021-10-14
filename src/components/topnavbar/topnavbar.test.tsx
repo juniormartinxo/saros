@@ -2,10 +2,44 @@ import {
   TopNavbarStyled,
   TopMenuStyled,
   TopMenuItemStyled,
-  TopMenuItemLinkStyled,
 } from './topnavbar-styled'
-import { TopNavbar } from './topnavbar'
+import { TopNavbar, TopMenuItem } from './topnavbar'
 import { Logo } from '../logo'
+import { menuItems } from './menuItems'
+
+test('O menu tem que ser este', () => {
+  expect(menuItems).toEqual([
+    {
+      name: 'Dashboard',
+      link: '/',
+      multi: false,
+      submenu: [],
+    },
+    {
+      name: 'Cadastros',
+      link: '/',
+      multi: true,
+      submenu: [
+        {
+          name: 'Usuários',
+          link: '/usuarios',
+        },
+        {
+          name: 'Professores',
+          link: '/professores',
+        },
+        {
+          name: 'Disciplinas',
+          link: '/disciplinas',
+        },
+        {
+          name: 'Turmas',
+          link: '/turmas',
+        },
+      ],
+    },
+  ])
+})
 
 describe('TopNavbar', () => {
   it('deve retornar o TopNavbar', () => {
@@ -16,19 +50,15 @@ describe('TopNavbar', () => {
             <Logo />
           </TopMenuItemStyled>
 
-          <TopMenuItemStyled key={1}>
-            <TopMenuItemLinkStyled href="/">
-              Página inicial
-            </TopMenuItemLinkStyled>
-          </TopMenuItemStyled>
-
-          <TopMenuItemStyled key={2}>
-            <TopMenuItemLinkStyled href="/">Sobre</TopMenuItemLinkStyled>
-          </TopMenuItemStyled>
-
-          <TopMenuItemStyled key={3}>
-            <TopMenuItemLinkStyled href="/">Contato</TopMenuItemLinkStyled>
-          </TopMenuItemStyled>
+          {menuItems.map((item, index) => (
+            <TopMenuItem
+              name={item.name}
+              link={item.link}
+              submenu={item.submenu}
+              multi={item.multi}
+              key={index}
+            />
+          ))}
         </TopMenuStyled>
       </TopNavbarStyled>,
     )
