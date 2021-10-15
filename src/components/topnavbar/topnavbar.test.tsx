@@ -2,7 +2,7 @@ import {
   TopNavbarStyled,
   TopMenuStyled,
   TopMenuItemStyled,
-} from './topnavbar-styled'
+} from './topnavbar.styled'
 import { TopNavbar, TopMenuItem } from './topnavbar'
 import { Logo } from '../logo'
 import { menuItems } from './menuItems'

@@ -1,10 +1,16 @@
 import { TopNavbar } from '../topnavbar'
-import { HeaderStyled, NavbarStyled } from './header-styled'
+import {
+  ContainerHeaderStyled,
+  HeaderStyled,
+  NavbarStyled,
+} from './header.styled'
 
 function Header() {
   return (
     <HeaderStyled>
-      <NavbarStyled>NavbarStyled</NavbarStyled>
+      <NavbarStyled>
+        <ContainerHeaderStyled>NavbarStyled</ContainerHeaderStyled>
+      </NavbarStyled>
       <TopNavbar />
     </HeaderStyled>
   )

@@ -1,7 +1,13 @@
 import styled from 'styled-components/macro'
 
+const ContainerHeaderStyled = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+`
+
 const HeaderStyled = styled.header`
-  padding: 0.5rem 1rem;
+  margin: 0;
+  padding: 0;
 `
 
 const TopbarStyled = styled.div`
@@ -16,6 +22,7 @@ const NavbarStyled = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
+  background-color: #025d73;
 `
 
-export { HeaderStyled, TopbarStyled, NavbarStyled }
+export { ContainerHeaderStyled, HeaderStyled, TopbarStyled, NavbarStyled }

@@ -2,25 +2,25 @@ import styled from 'styled-components/macro'
 
 const TopNavbarStyled = styled.nav`
   display: block;
-  background-color: antiquewhite;
 `
 
 const TopMenuStyled = styled.ul`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   list-style: none;
   padding: 0;
   margin: 0 auto;
   width: 90%;
-  border: 1px solid black;
 `
 
 const TopMenuItemStyled = styled.li`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 0;
   margin: 0;
+  width: 200px;
+  position: relative;
 `
 
 const TopMenuItemLinkStyled = styled.a`
@@ -42,11 +42,14 @@ const TopMenuItemLinkStyled = styled.a`
 const TopSubMenuStyled = styled.ul`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
   padding: 0;
   margin: 0;
   width: 100%;
   border: 1px solid black;
+  position: absolute;
+  top: 100%;
 `
 
 const TopSubMenuItemStyled = styled.li`

@@ -6,7 +6,7 @@ import {
   TopSubMenuStyled,
   TopSubMenuItemStyled,
   TopSubMenuItemLinkStyled,
-} from './topnavbar-styled'
+} from './topnavbar.styled'
 import { Logo } from '../logo'
 import { menuItems } from './menuItems'
 
