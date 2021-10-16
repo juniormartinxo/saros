@@ -50,6 +50,7 @@ const TopSubMenuStyled = styled.ul`
   border: 1px solid black;
   position: absolute;
   top: 100%;
+  visibility: hidden;
 `
 
 const TopSubMenuItemStyled = styled.li`
