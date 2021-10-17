@@ -1,4 +1,4 @@
-import { TopNavbar } from '../topnavbar'
+import { Navbar } from '../navbar'
 import {
   HeaderStyled,
   NavbarStyled,
@@ -13,7 +13,7 @@ describe('Header', () => {
         <NavbarStyled>
           <ContainerHeaderStyled>NavbarStyled</ContainerHeaderStyled>
         </NavbarStyled>
-        <TopNavbar />
+        <Navbar />
       </HeaderStyled>,
     )
   })

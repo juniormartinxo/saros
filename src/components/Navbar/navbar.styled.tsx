@@ -1,10 +1,10 @@
 import styled from 'styled-components/macro'
 
-const TopNavbarStyled = styled.nav`
+const NavbarStyled = styled.nav`
   display: block;
 `
 
-const TopMenuStyled = styled.ul`
+const MenuStyled = styled.ul`
   display: flex;
   justify-content: flex-start;
   list-style: none;
@@ -13,7 +13,7 @@ const TopMenuStyled = styled.ul`
   width: 90%;
 `
 
-const TopMenuItemStyled = styled.li`
+const MenuItemStyled = styled.li`
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -23,7 +23,7 @@ const TopMenuItemStyled = styled.li`
   position: relative;
 `
 
-const TopMenuItemLinkStyled = styled.a`
+const MenuItemLinkStyled = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,7 @@ const TopMenuItemLinkStyled = styled.a`
   }
 `
 
-const TopSubMenuStyled = styled.ul`
+const DropdownStyled = styled.ul`
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -49,10 +49,10 @@ const TopSubMenuStyled = styled.ul`
   width: 100%;
   border: 1px solid black;
   position: absolute;
-  top: 100%;
+  :100% ;
 `
 
-const TopSubMenuItemStyled = styled.li`
+const SubMenuItemStyled = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +60,7 @@ const TopSubMenuItemStyled = styled.li`
   margin: 0;
 `
 
-const TopSubMenuItemLinkStyled = styled.a`
+const SubMenuItemLinkStyled = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,11 +73,11 @@ const TopSubMenuItemLinkStyled = styled.a`
 `
 
 export {
-  TopNavbarStyled,
-  TopMenuStyled,
-  TopMenuItemStyled,
-  TopMenuItemLinkStyled,
-  TopSubMenuStyled,
-  TopSubMenuItemStyled,
-  TopSubMenuItemLinkStyled,
+  NavbarStyled,
+  MenuStyled,
+  MenuItemStyled,
+  MenuItemLinkStyled,
+  DropdownStyled,
+  SubMenuItemStyled,
+  SubMenuItemLinkStyled,
 }
