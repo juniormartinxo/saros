@@ -1,4 +1,4 @@
-import { TopNavbar } from '../topnavbar'
+import { Navbar } from 'components/navbar'
 import {
   ContainerHeaderStyled,
   HeaderStyled,
@@ -11,7 +11,7 @@ function Header() {
       <NavbarStyled>
         <ContainerHeaderStyled>NavbarStyled</ContainerHeaderStyled>
       </NavbarStyled>
-      <TopNavbar />
+      <Navbar />
     </HeaderStyled>
   )
 }

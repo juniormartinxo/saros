@@ -1,9 +1,5 @@
-import {
-  TopNavbarStyled,
-  TopMenuStyled,
-  TopMenuItemStyled,
-} from './topnavbar.styled'
-import { TopNavbar, TopMenuItem } from './topnavbar'
+import { NavbarStyled, MenuStyled, MenuItemStyled } from './navbar.styled'
+import { Navbar, MenuItem } from './navbar'
 import { Logo } from '../logo'
 import { menuItems } from './menuItems'
 
@@ -41,17 +37,17 @@ test('O menu tem que ser este', () => {
   ])
 })
 
-describe('TopNavbar', () => {
-  it('deve retornar o TopNavbar', () => {
-    expect(TopNavbar()).toEqual(
-      <TopNavbarStyled>
-        <TopMenuStyled>
-          <TopMenuItemStyled key={0}>
+describe('Navbar', () => {
+  it('deve retornar o Navbar', () => {
+    expect(Navbar()).toEqual(
+      <NavbarStyled>
+        <MenuStyled>
+          <MenuItemStyled key={0}>
             <Logo />
-          </TopMenuItemStyled>
+          </MenuItemStyled>
 
           {menuItems.map((item, index) => (
-            <TopMenuItem
+            <MenuItem
               name={item.name}
               link={item.link}
               submenu={item.submenu}
@@ -59,8 +55,8 @@ describe('TopNavbar', () => {
               key={index}
             />
           ))}
-        </TopMenuStyled>
-      </TopNavbarStyled>,
+        </MenuStyled>
+      </NavbarStyled>,
     )
   })
 })
