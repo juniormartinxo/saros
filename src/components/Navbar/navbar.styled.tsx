@@ -49,7 +49,7 @@ const DropdownStyled = styled.ul`
   width: 100%;
   border: 1px solid black;
   position: absolute;
-  :100% ;
+  visibility: hidden;
 `
 
 const SubMenuItemStyled = styled.li`
