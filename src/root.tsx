@@ -1,4 +1,4 @@
-import { App } from 'app'
+import { App } from 'App'
 import GlobalStyle from 'resources/global-style'
 
 import 'normalize.css'

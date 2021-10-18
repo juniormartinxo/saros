@@ -52,7 +52,7 @@ const DropdownStyled = styled.ul`
   visibility: hidden;
 `
 
-const SubMenuItemStyled = styled.li`
+const DropdownItemStyled = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +60,7 @@ const SubMenuItemStyled = styled.li`
   margin: 0;
 `
 
-const SubMenuItemLinkStyled = styled.a`
+const DropdownItemLinkStyled = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,6 +78,6 @@ export {
   MenuItemStyled,
   MenuItemLinkStyled,
   DropdownStyled,
-  SubMenuItemStyled,
-  SubMenuItemLinkStyled,
+  DropdownItemStyled,
+  DropdownItemLinkStyled,
 }
