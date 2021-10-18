@@ -1,6 +1,6 @@
 import { NavbarStyled, MenuStyled, MenuItemStyled } from './navbar.styled'
 import { Navbar, MenuItem } from './navbar'
-import { Logo } from '../logo'
+import { Logo } from '../Logo'
 import { menuItems } from './menuItems'
 
 test('O menu tem que ser este', () => {

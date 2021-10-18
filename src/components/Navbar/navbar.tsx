@@ -4,10 +4,10 @@ import {
   MenuItemStyled,
   MenuItemLinkStyled,
   DropdownStyled,
-  SubMenuItemStyled,
-  SubMenuItemLinkStyled,
+  DropdownItemStyled,
+  DropdownItemLinkStyled,
 } from './navbar.styled'
-import { Logo } from '../logo'
+import { Logo } from '../Logo'
 import { menuItems } from './menuItems'
 
 function Navbar() {
@@ -32,7 +32,7 @@ function Navbar() {
   )
 }
 
-type SubMenuProps = {
+type DropdownProps = {
   name: string
   link: string
 }
@@ -41,7 +41,7 @@ type MenuProps = {
   name: string
   link: string
   multi: boolean
-  submenu: Array<SubMenuProps>
+  submenu: Array<DropdownProps>
 }
 
 function MenuItem({ name, link, multi, submenu }: MenuProps) {
@@ -51,7 +51,7 @@ function MenuItem({ name, link, multi, submenu }: MenuProps) {
       {multi && (
         <DropdownStyled>
           {submenu.map((item, index) => (
-            <SubMenuItem name={item.name} link={item.link} key={index} />
+            <DropdownItem name={item.name} link={item.link} key={index} />
           ))}
         </DropdownStyled>
       )}
@@ -59,11 +59,11 @@ function MenuItem({ name, link, multi, submenu }: MenuProps) {
   )
 }
 
-function SubMenuItem({ name, link }: SubMenuProps) {
+function DropdownItem({ name, link }: DropdownProps) {
   return (
-    <SubMenuItemStyled>
-      <SubMenuItemLinkStyled href={link}>{name}</SubMenuItemLinkStyled>
-    </SubMenuItemStyled>
+    <DropdownItemStyled>
+      <DropdownItemLinkStyled href={link}>{name}</DropdownItemLinkStyled>
+    </DropdownItemStyled>
   )
 }
 
