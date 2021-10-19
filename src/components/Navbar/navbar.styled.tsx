@@ -1,5 +1,8 @@
 import styled from 'styled-components/macro'
 
+const transitionStart = '0.2s'
+const transitionEnd = '0.3s'
+
 const NavbarStyled = styled.nav`
   display: block;
 `
@@ -24,9 +27,6 @@ const MenuItemStyled = styled.li`
 `
 
 const MenuItemLinkStyled = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 8px 10px;
   margin: 0;
   font-size: 0, 8rem;
@@ -40,36 +40,36 @@ const MenuItemLinkStyled = styled.a`
 `
 
 const DropdownStyled = styled.ul`
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
+  list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
-  border: 1px solid black;
   position: absolute;
-  visibility: hidden;
+  top: 34px;
+  left: 0;
+  background-color: #ececece2;
 `
 
 const DropdownItemStyled = styled.li`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0;
   margin: 0;
 `
 
 const DropdownItemLinkStyled = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 10px;
-  margin: 0;
+  display: block;
+  padding: 15px 10px;
   font-size: 0, 8rem;
   color: black;
   cursor: pointer;
   text-decoration: none;
+  text-align: left;
+  transition: ${transitionEnd} linear background-color;
+
+  &:hover {
+    color: #fff;
+    background-color: #157968;
+    transition: ${transitionStart} linear background-color;
+  }
 `
 
 export {
