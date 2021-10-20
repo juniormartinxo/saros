@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   NavbarStyled,
   MenuStyled,
@@ -45,16 +46,40 @@ type MenuProps = {
 }
 
 function MenuItem({ name, link, multi, submenu }: MenuProps) {
+  const [style, setStyle] = useState({
+    top: 58,
+    transition: 'top 0.3s linear, opacity 0.2s linear',
+    opacity: 0,
+  })
+
   return (
-    <MenuItemStyled>
-      <MenuItemLinkStyled href={link}>{name}</MenuItemLinkStyled>
+    <MenuItemStyled
+      onMouseOver={() => {
+        setStyle({
+          top: 48,
+          transition: 'top 0.3s linear, opacity 0.2s linear',
+          opacity: 1,
+        })
+      }}
+      onMouseLeave={() => {
+        setStyle({
+          top: 58,
+          opacity: 0,
+          transition: 'top 0.2s linear, opacity 0.3s linear',
+        })
+      }}
+    >
       {multi && (
-        <DropdownStyled>
-          {submenu.map((item, index) => (
-            <DropdownItem name={item.name} link={item.link} key={index} />
-          ))}
-        </DropdownStyled>
+        <>
+          <MenuItemLinkStyled>{name}</MenuItemLinkStyled>
+          <DropdownStyled style={style}>
+            {submenu.map((item, index) => (
+              <DropdownItem name={item.name} link={item.link} key={index} />
+            ))}
+          </DropdownStyled>
+        </>
       )}
+      {!multi && <MenuItemLinkStyled href={link}>{name}</MenuItemLinkStyled>}
     </MenuItemStyled>
   )
 }
