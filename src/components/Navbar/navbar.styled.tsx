@@ -18,15 +18,29 @@ const MenuStyled = styled.ul`
 `
 
 const MenuItemLinkStyled = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
   padding: 15px 0;
   margin: 0;
-  font-size: 0, 8rem;
-  color: black;
+  font-size: 0.9rem;
+  color: #025d73;
   cursor: pointer;
   text-decoration: none;
+  font-weight: 500;
+  filter: brightness(1);
+  transition: filter ${transitionEnd} linear;
+
+  svg {
+    height: 20px;
+    padding: 0;
+    align-self: center;
+  }
 
   &:hover {
     color: #02718c;
+    filter: brightness(1.2);
+    transition: filter ${transitionStart} linear;
   }
 `
 

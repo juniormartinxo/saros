@@ -11,6 +11,8 @@ import {
 import { Logo } from '../Logo'
 import { menuItems } from './menuItems'
 
+import * as Icon from 'resources/ui/icons'
+
 function Navbar() {
   return (
     <NavbarStyled>
@@ -74,7 +76,9 @@ function MenuItem({ name, link, multi, submenu }: MenuProps) {
     >
       {multi && (
         <>
-          <MenuItemLinkStyled>{name}</MenuItemLinkStyled>
+          <MenuItemLinkStyled>
+            <span>{name}</span> <Icon.ChevronDown />
+          </MenuItemLinkStyled>
           <DropdownStyled style={style}>
             {submenu.map((item, index) => (
               <DropdownItem name={item.name} link={item.link} key={index} />
@@ -82,7 +86,11 @@ function MenuItem({ name, link, multi, submenu }: MenuProps) {
           </DropdownStyled>
         </>
       )}
-      {!multi && <MenuItemLinkStyled href={link}>{name}</MenuItemLinkStyled>}
+      {!multi && (
+        <MenuItemLinkStyled href={link}>
+          <Icon.Home /> {name}
+        </MenuItemLinkStyled>
+      )}
     </MenuItemStyled>
   )
 }
