@@ -48,8 +48,8 @@ type MenuProps = {
 function MenuItem({ name, link, multi, submenu }: MenuProps) {
   const [style, setStyle] = useState({
     top: 58,
-    transition: 'top 0.3s linear, opacity 0.2s linear',
     opacity: 0,
+    transition: 'top 0.3s linear, opacity 0.2s linear',
   })
 
   return (

@@ -4,8 +4,9 @@ const transitionStart = '0.2s'
 const transitionEnd = '0.3s'
 
 const NavbarStyled = styled.nav`
-  display: block;
+  display: flex;
   background-color: #d9ead7;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 `
 
 const MenuStyled = styled.ul`
@@ -25,7 +26,7 @@ const MenuItemLinkStyled = styled.a`
   text-decoration: none;
 
   &:hover {
-    color: red;
+    color: #02718c;
   }
 `
 
@@ -78,7 +79,7 @@ const DropdownItemLinkStyled = styled.a`
 
   &:hover {
     color: #fff;
-    background-color: #157968;
+    background-color: #02718c;
     transition: ${transitionStart} linear background-color;
   }
 `
