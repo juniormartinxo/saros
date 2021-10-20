@@ -46,21 +46,33 @@ type MenuProps = {
 }
 
 function MenuItem({ name, link, multi, submenu }: MenuProps) {
-  const [isOpen, setIsOpen] = useState(true)
+  const [style, setStyle] = useState({
+    top: 58,
+    transition: 'top 0.3s linear, opacity 0.2s linear',
+    opacity: 0,
+  })
 
   return (
     <MenuItemStyled
       onMouseOver={() => {
-        setIsOpen(true)
+        setStyle({
+          top: 48,
+          transition: 'top 0.3s linear, opacity 0.2s linear',
+          opacity: 1,
+        })
       }}
       onMouseLeave={() => {
-        setIsOpen(false)
+        setStyle({
+          top: 58,
+          opacity: 0,
+          transition: 'top 0.2s linear, opacity 0.3s linear',
+        })
       }}
     >
       {multi && (
         <>
           <MenuItemLinkStyled>{name}</MenuItemLinkStyled>
-          <DropdownStyled style={{ display: isOpen ? 'block' : 'none' }}>
+          <DropdownStyled style={style}>
             {submenu.map((item, index) => (
               <DropdownItem name={item.name} link={item.link} key={index} />
             ))}
