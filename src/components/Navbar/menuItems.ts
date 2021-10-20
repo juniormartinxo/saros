@@ -9,7 +9,7 @@ const menuItems = [
   {
     name: 'Cadastros',
     link: '/',
-    icon: 'calendar',
+    icon: 'add-list',
     multi: true,
     submenu: [
       {
@@ -29,6 +29,13 @@ const menuItems = [
         link: '/turmas',
       },
     ],
+  },
+  {
+    name: 'Quadro de horários',
+    link: '/',
+    icon: 'calendar',
+    multi: false,
+    submenu: [],
   },
 ]
 

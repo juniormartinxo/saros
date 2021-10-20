@@ -8,12 +8,14 @@ test('O menu tem que ser este', () => {
     {
       name: 'Dashboard',
       link: '/',
+      icon: 'home',
       multi: false,
       submenu: [],
     },
     {
       name: 'Cadastros',
       link: '/',
+      icon: 'add-list',
       multi: true,
       submenu: [
         {
@@ -34,6 +36,13 @@ test('O menu tem que ser este', () => {
         },
       ],
     },
+    {
+      name: 'Quadro de horários',
+      link: '/',
+      icon: 'calendar',
+      multi: false,
+      submenu: [],
+    },
   ])
 })
 
@@ -48,11 +57,12 @@ describe('Navbar', () => {
 
           {menuItems.map((item, index) => (
             <MenuItem
+              key={index}
               name={item.name}
               link={item.link}
-              submenu={item.submenu}
+              icon={item.icon}
               multi={item.multi}
-              key={index}
+              submenu={item.submenu}
             />
           ))}
         </MenuStyled>

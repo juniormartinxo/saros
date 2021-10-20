@@ -9,6 +9,7 @@ import {
   DropdownItemLinkStyled,
 } from './navbar.styled'
 import { Logo } from '../Logo'
+import { NavIcons } from '../NavIcons'
 import { menuItems } from './menuItems'
 
 import * as Icon from 'resources/ui/icons'
@@ -23,11 +24,12 @@ function Navbar() {
 
         {menuItems.map((item, index) => (
           <MenuItem
+            key={index}
             name={item.name}
             link={item.link}
-            submenu={item.submenu}
+            icon={item.icon}
             multi={item.multi}
-            key={index}
+            submenu={item.submenu}
           />
         ))}
       </MenuStyled>
@@ -43,11 +45,12 @@ type DropdownProps = {
 type MenuProps = {
   name: string
   link: string
+  icon: string
   multi: boolean
   submenu: Array<DropdownProps>
 }
 
-function MenuItem({ name, link, multi, submenu }: MenuProps) {
+function MenuItem({ name, link, icon, multi, submenu }: MenuProps) {
   const [style, setStyle] = useState({
     left: -1000,
     top: 58,
@@ -60,7 +63,7 @@ function MenuItem({ name, link, multi, submenu }: MenuProps) {
       onMouseOver={() => {
         setStyle({
           left: -5,
-          top: 48,
+          top: 50,
           transition: 'left 0s linear, top 0.3s linear, opacity 0.2s linear',
           opacity: 1,
         })
@@ -77,7 +80,7 @@ function MenuItem({ name, link, multi, submenu }: MenuProps) {
       {multi && (
         <>
           <MenuItemLinkStyled>
-            <span>{name}</span> <Icon.ChevronDown />
+            <NavIcons icon={icon} /> <span>{name}</span> <Icon.ChevronDown />
           </MenuItemLinkStyled>
           <DropdownStyled style={style}>
             {submenu.map((item, index) => (
@@ -88,7 +91,7 @@ function MenuItem({ name, link, multi, submenu }: MenuProps) {
       )}
       {!multi && (
         <MenuItemLinkStyled href={link}>
-          <Icon.Home /> {name}
+          <NavIcons icon={icon} /> {name}
         </MenuItemLinkStyled>
       )}
     </MenuItemStyled>
