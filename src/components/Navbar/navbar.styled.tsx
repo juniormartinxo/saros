@@ -30,6 +30,16 @@ const MenuItemLinkStyled = styled.a`
   }
 `
 
+const MenuItemStyled = styled.li`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 180px;
+  position: relative;
+`
+
 const DropdownStyled = styled.ul`
   list-style: none;
   padding: 0;
@@ -41,25 +51,6 @@ const DropdownStyled = styled.ul`
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-`
-
-const MenuItemStyled = styled.li`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  width: 200px;
-  position: relative;
-
-  /*
-  &:hover {
-    ${DropdownStyled} {
-      top: 48px;
-      transition: ${transitionStart} linear top;
-    }
-  }
-  */
 `
 
 const DropdownItemStyled = styled.li`
