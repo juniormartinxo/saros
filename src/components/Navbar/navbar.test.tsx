@@ -36,14 +36,27 @@ describe('Navbar', () => {
         name="Dashboard"
         link="/"
         icon="home"
-        multi={false}
-        submenu={[]}
+        multi
+        submenu={[
+          {
+            name: 'Usuários',
+            link: '/usuarios',
+          },
+          {
+            name: 'Professores',
+            link: '/professores',
+          },
+        ]}
       />,
     )
 
     const link = screen.getByText(/Dashboard/i)
 
     expect(link).toHaveTextContent('Dashboard')
+
+    // fireEvent.mouseOver(link)
+
+    expect(screen.getByText(/Professores/i)).toBeInTheDocument()
   })
 })
 
