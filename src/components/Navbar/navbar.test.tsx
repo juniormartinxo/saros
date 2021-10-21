@@ -41,7 +41,9 @@ describe('Navbar', () => {
       />,
     )
 
-    expect(screen.getByRole('a')).toHaveTextContent('Dashboard')
+    const link = screen.getByText(/Dashboard/i)
+
+    expect(link).toHaveTextContent('Dashboard')
   })
 })
 
