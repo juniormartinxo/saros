@@ -4,7 +4,7 @@ import { Navbar, MenuItem } from './navbar'
 // import { NavIcons } from '../NavIcons'
 import { Logo } from '../Logo'
 import { menuItems } from './menuItems'
-import { render } from '@testing-library/react'
+import { screen, render } from '@testing-library/react'
 
 describe('Navbar', () => {
   it('deve retornar o Navbar', () => {
@@ -41,7 +41,7 @@ describe('Navbar', () => {
       />,
     )
 
-    expect(document.querySelector('a')).toHaveTextContent('Dashboard')
+    expect(screen.getByRole('a')).toHaveTextContent('Dashboard')
   })
 })
 
