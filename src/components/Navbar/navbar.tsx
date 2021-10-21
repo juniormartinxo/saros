@@ -1,13 +1,5 @@
 import { useState } from 'react'
-import {
-  NavbarStyled,
-  MenuStyled,
-  MenuItemStyled,
-  MenuItemLinkStyled,
-  DropdownStyled,
-  DropdownItemStyled,
-  DropdownItemLinkStyled,
-} from './navbar.styled'
+import * as Styled from './navbar.styled'
 import { Logo } from '../Logo'
 import { NavIcons } from '../NavIcons'
 import { menuItems } from './menuItems'
@@ -16,11 +8,11 @@ import * as Icon from 'resources/ui/icons'
 
 function Navbar() {
   return (
-    <NavbarStyled>
-      <MenuStyled>
-        <MenuItemStyled key={0}>
+    <Styled.NavbarStyled>
+      <Styled.MenuStyled>
+        <Styled.MenuItemStyled key={0}>
           <Logo />
-        </MenuItemStyled>
+        </Styled.MenuItemStyled>
 
         {menuItems.map((item, index) => (
           <MenuItem
@@ -32,8 +24,8 @@ function Navbar() {
             submenu={item.submenu}
           />
         ))}
-      </MenuStyled>
-    </NavbarStyled>
+      </Styled.MenuStyled>
+    </Styled.NavbarStyled>
   )
 }
 
@@ -58,51 +50,52 @@ function MenuItem({ name, link, icon, multi, submenu }: MenuProps) {
     transition: 'top 0.3s linear, opacity 0.2s linear',
   })
 
+  const handleStyle = (left: number, top: number, opacity: number) => {
+    setStyle({
+      left: left,
+      top: top,
+      opacity: opacity,
+      transition: 'left 0s linear, top 0.3s linear, opacity 0.2s linear',
+    })
+  }
+
   return (
-    <MenuItemStyled
+    <Styled.MenuItemStyled
       onMouseOver={() => {
-        setStyle({
-          left: -5,
-          top: 50,
-          transition: 'left 0s linear, top 0.3s linear, opacity 0.2s linear',
-          opacity: 1,
-        })
+        handleStyle(-5, 50, 1)
       }}
       onMouseLeave={() => {
-        setStyle({
-          left: -1000,
-          top: 58,
-          opacity: 0,
-          transition: 'top 0.2s linear, opacity 0.3s linear',
-        })
+        handleStyle(-1000, 58, 1)
       }}
     >
       {multi && (
         <>
-          <MenuItemLinkStyled>
+          <Styled.MenuItemLinkStyled>
             <NavIcons icon={icon} /> <span>{name}</span> <Icon.ChevronDown />
-          </MenuItemLinkStyled>
-          <DropdownStyled style={style}>
+          </Styled.MenuItemLinkStyled>
+          <Styled.DropdownStyled style={style}>
             {submenu.map((item, index) => (
               <DropdownItem name={item.name} link={item.link} key={index} />
             ))}
-          </DropdownStyled>
+          </Styled.DropdownStyled>
         </>
       )}
       {!multi && (
-        <MenuItemLinkStyled href={link}>
+        <Styled.MenuItemLinkStyled href={link}>
           <NavIcons icon={icon} /> {name}
-        </MenuItemLinkStyled>
+        </Styled.MenuItemLinkStyled>
       )}
-    </MenuItemStyled>
+    </Styled.MenuItemStyled>
   )
 }
 
 function DropdownItem({ name, link }: DropdownProps) {
   return (
-    <DropdownItemStyled>
-      <DropdownItemLinkStyled href={link}>{name}</DropdownItemLinkStyled>
-    </DropdownItemStyled>
+    <Styled.DropdownItemStyled>
+      <Styled.DropdownItemLinkStyled href={link}>
+        {name}
+      </Styled.DropdownItemLinkStyled>
+    </Styled.DropdownItemStyled>
   )
 }
 

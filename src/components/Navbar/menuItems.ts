@@ -31,11 +31,20 @@ const menuItems = [
     ],
   },
   {
-    name: 'Quadro de horários',
+    name: 'Configurações',
     link: '/',
-    icon: 'calendar',
-    multi: false,
-    submenu: [],
+    icon: 'cog-line',
+    multi: true,
+    submenu: [
+      {
+        name: 'Matriz curricular',
+        link: '/matriz',
+      },
+      {
+        name: 'Quadro de horários',
+        link: '/quadro-horario',
+      },
+    ],
   },
 ]
 

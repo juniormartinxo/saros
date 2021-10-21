@@ -1,7 +1,49 @@
-import { NavbarStyled, MenuStyled, MenuItemStyled } from './navbar.styled'
+// import { useState } from 'react'
+import * as Styled from './navbar.styled'
 import { Navbar, MenuItem } from './navbar'
+// import { NavIcons } from '../NavIcons'
 import { Logo } from '../Logo'
 import { menuItems } from './menuItems'
+import { render } from '@testing-library/react'
+
+describe('Navbar', () => {
+  it('deve retornar o Navbar', () => {
+    expect(Navbar()).toEqual(
+      <Styled.NavbarStyled>
+        <Styled.MenuStyled>
+          <Styled.MenuItemStyled key={0}>
+            <Logo />
+          </Styled.MenuItemStyled>
+
+          {menuItems.map((item, index) => (
+            <MenuItem
+              key={index}
+              name={item.name}
+              link={item.link}
+              icon={item.icon}
+              multi={item.multi}
+              submenu={item.submenu}
+            />
+          ))}
+        </Styled.MenuStyled>
+      </Styled.NavbarStyled>,
+    )
+  })
+
+  it('O MenuItem deve ser', () => {
+    render(
+      <MenuItem
+        name="Dashboard"
+        link="/"
+        icon="home"
+        multi={false}
+        submenu={[]}
+      />,
+    )
+
+    expect(document.querySelector('a')).toHaveTextContent('Dashboard')
+  })
+})
 
 test('O menu tem que ser este', () => {
   expect(menuItems).toEqual([
@@ -37,36 +79,20 @@ test('O menu tem que ser este', () => {
       ],
     },
     {
-      name: 'Quadro de horários',
+      name: 'Configurações',
       link: '/',
-      icon: 'calendar',
-      multi: false,
-      submenu: [],
+      icon: 'cog-line',
+      multi: true,
+      submenu: [
+        {
+          name: 'Matriz curricular',
+          link: '/matriz',
+        },
+        {
+          name: 'Quadro de horários',
+          link: '/quadro-horario',
+        },
+      ],
     },
   ])
-})
-
-describe('Navbar', () => {
-  it('deve retornar o Navbar', () => {
-    expect(Navbar()).toEqual(
-      <NavbarStyled>
-        <MenuStyled>
-          <MenuItemStyled key={0}>
-            <Logo />
-          </MenuItemStyled>
-
-          {menuItems.map((item, index) => (
-            <MenuItem
-              key={index}
-              name={item.name}
-              link={item.link}
-              icon={item.icon}
-              multi={item.multi}
-              submenu={item.submenu}
-            />
-          ))}
-        </MenuStyled>
-      </NavbarStyled>,
-    )
-  })
 })
