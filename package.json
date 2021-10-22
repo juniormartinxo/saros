@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --onlyChanged --color",
+    "test": "react-scripts test --onlyChanged --color --verbose",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext ts,tsx --no-eslintrc --config .eslintrc-default.json",
     "lint:fix": "yarn lint --fix",
@@ -64,6 +64,8 @@
   "devDependencies": {
     "@babel/preset-env": "^7.15.8",
     "@babel/preset-react": "^7.14.5",
+    "eslint-plugin-jest-dom": "^3.9.2",
+    "eslint-plugin-testing-library": "^4.12.4",
     "react-test-renderer": "^17.0.2"
   }
 }

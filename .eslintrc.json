@@ -1,4 +1,4 @@
 {
   "extends": ".eslintrc-default.json",
-  "plugins": ["only-warn"]
+  "plugins": ["only-warn", "testing-library", "jest-dom"]
 }
