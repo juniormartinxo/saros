@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import * as Styled from './navbar.styled'
 import { Logo } from '../Logo'
-import { NavIcons } from '../NavIcons'
+import { NavIcon } from '../NavIcon'
 import { menuItems } from './menuItems'
 
 import * as Icon from 'resources/ui/icons'
@@ -71,7 +71,7 @@ function MenuItem({ name, link, icon, multi, submenu }: MenuProps) {
       {multi && (
         <>
           <Styled.MenuItemLinkStyled>
-            <NavIcons icon={icon} /> <span>{name}</span> <Icon.ChevronDown />
+            <NavIcon icon={icon} /> <span>{name}</span> <Icon.ChevronDown />
           </Styled.MenuItemLinkStyled>
           <Styled.DropdownStyled style={style}>
             {submenu.map((item, index) => (
@@ -82,7 +82,7 @@ function MenuItem({ name, link, icon, multi, submenu }: MenuProps) {
       )}
       {!multi && (
         <Styled.MenuItemLinkStyled href={link}>
-          <NavIcons icon={icon} /> {name}
+          <NavIcon icon={icon} /> {name}
         </Styled.MenuItemLinkStyled>
       )}
     </Styled.MenuItemStyled>

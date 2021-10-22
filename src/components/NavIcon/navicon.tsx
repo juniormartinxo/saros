@@ -1,10 +1,10 @@
 import * as Icon from 'resources/ui/icons'
 
-type NavIconsProps = {
+type NavIconProps = {
   icon: String
 }
 
-function NavIcons({ icon }: NavIconsProps) {
+function NavIcon({ icon }: NavIconProps) {
   switch (icon) {
     case 'home':
       return <Icon.Home />
@@ -21,4 +21,4 @@ function NavIcons({ icon }: NavIconsProps) {
   }
 }
 
-export { NavIcons }
+export { NavIcon }
