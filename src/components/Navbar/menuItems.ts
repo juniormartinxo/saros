@@ -38,7 +38,7 @@ const menuItems = [
     submenu: [
       {
         name: 'Matriz curricular',
-        link: '/matriz',
+        link: '/matriz-curricular',
       },
       {
         name: 'Quadro de horários',
