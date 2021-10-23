@@ -18,6 +18,7 @@ declare module 'styled-components' {
       colorSecondary: string
     }
     fontSizes: {
+      base: string
       small: string
       medium: string
       large: string

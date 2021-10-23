@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html{
-    font-size: 16px;
+    font-size: ${(props) => props.theme.fontSizes.base};
   }
 `
 

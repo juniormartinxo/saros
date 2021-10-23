@@ -19,6 +19,7 @@ const light: DefaultTheme = {
     colorSecondary: '#83c5be',
   },
   fontSizes: {
+    base: '0,9rem',
     small: '1.2rem',
     medium: '1.6rem',
     large: '2.4rem',
