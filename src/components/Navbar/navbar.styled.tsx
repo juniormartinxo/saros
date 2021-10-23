@@ -5,7 +5,7 @@ const transitionEnd = '0.3s'
 
 const NavbarStyled = styled.nav`
   display: flex;
-  background-color: #d9ead7;
+  background-color: ${(props) => props.theme.colors.primary};
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 `
 
@@ -20,11 +20,11 @@ const MenuStyled = styled.ul`
 const MenuItemLinkStyled = styled.a`
   display: flex;
   align-items: center;
-  justify-content: baseline;
+  justify-content: center;
   padding: 15px 0;
   margin: 0;
   font-size: 0.9rem;
-  color: #025d73;
+  color: ${(props) => props.theme.colors.secondary};
   cursor: pointer;
   text-decoration: none;
   font-weight: 500;
@@ -32,13 +32,13 @@ const MenuItemLinkStyled = styled.a`
   transition: filter ${transitionEnd} linear;
 
   svg {
-    height: 20px;
+    height: 18px;
     padding: 0;
     align-self: center;
   }
 
   &:hover {
-    color: #02718c;
+    color: ${(props) => props.theme.colors.secondary};
     filter: brightness(1.2);
     transition: filter ${transitionStart} linear;
   }
@@ -63,8 +63,8 @@ const DropdownStyled = styled.ul`
   top: 58px;
   left: -5px;
   background-color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: ${(props) => props.theme.colors.shadow} 0px 10px 15px -3px,
+    ${(props) => props.theme.colors.shadow} 0px 4px 6px -2px;
 `
 
 const DropdownItemStyled = styled.li`
@@ -83,8 +83,8 @@ const DropdownItemLinkStyled = styled.a`
   transition: ${transitionEnd} linear background-color;
 
   &:hover {
-    color: #fff;
-    background-color: #02718c;
+    color: ${(props) => props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.secondary};
     transition: ${transitionStart} linear background-color;
   }
 `

@@ -22,7 +22,7 @@ const NavbarStyled = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
-  background-color: #025d73;
+  background-color: ${(props) => props.theme.colors.secondary};
 `
 
 export { ContainerHeaderStyled, HeaderStyled, TopbarStyled, NavbarStyled }

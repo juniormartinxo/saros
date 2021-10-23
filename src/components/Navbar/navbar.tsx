@@ -45,7 +45,7 @@ type MenuProps = {
 function MenuItem({ name, link, icon, multi, submenu }: MenuProps) {
   const [style, setStyle] = useState({
     left: -1000,
-    top: 58,
+    top: 60,
     opacity: 0,
     transition: 'top 0.3s linear, opacity 0.2s linear',
   })
@@ -62,10 +62,10 @@ function MenuItem({ name, link, icon, multi, submenu }: MenuProps) {
   return (
     <Styled.MenuItemStyled
       onMouseOver={() => {
-        handleStyle(-5, 50, 1)
+        handleStyle(-5, 48, 1)
       }}
       onMouseLeave={() => {
-        handleStyle(-1000, 58, 1)
+        handleStyle(-1000, 60, 1)
       }}
     >
       {multi && (

@@ -16,6 +16,8 @@ function NavIcon({ icon }: NavIconProps) {
       return <Icon.AddList />
     case 'cog-line':
       return <Icon.CogLine />
+    case 'settings':
+      return <Icon.Settings />
     default:
       return <Icon.Home />
   }

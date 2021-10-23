@@ -10,6 +10,9 @@ declare module 'styled-components' {
       danger: string
       light: string
       dark: string
+      background: string
+      shadow: string
+      white: string
     }
     fonts: {
       primary: string

@@ -33,7 +33,7 @@ const menuItems = [
   {
     name: 'Configurações',
     link: '/',
-    icon: 'cog-line',
+    icon: 'settings',
     multi: true,
     submenu: [
       {

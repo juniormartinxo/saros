@@ -1,10 +1,10 @@
 import { DefaultTheme } from 'styled-components'
 
-const light: DefaultTheme = {
-  title: 'light',
+const dark: DefaultTheme = {
+  title: 'dark',
   colors: {
     primary: '#006d77',
-    secondary: '#d9ead7',
+    secondary: '#83c5be',
     success: '#34c38f',
     info: '#50a5f1',
     warning: '#f1b44c',
@@ -12,7 +12,7 @@ const light: DefaultTheme = {
     light: '#74788d',
     dark: '#343a40',
     background: '#f8f8fb',
-    shadow: '#e2e2e2',
+    shadow: '#d3d3d3',
     white: '#ffffff',
   },
   fonts: {
@@ -35,4 +35,4 @@ const light: DefaultTheme = {
   },
 }
 
-export default light
+export default dark
