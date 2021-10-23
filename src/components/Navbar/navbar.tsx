@@ -62,7 +62,7 @@ function MenuItem({ name, link, icon, multi, submenu }: MenuProps) {
   return (
     <Styled.MenuItemStyled
       onMouseOver={() => {
-        handleStyle(-5, 48, 1)
+        handleStyle(-5, 52, 1)
       }}
       onMouseLeave={() => {
         handleStyle(-1000, 60, 1)
@@ -71,7 +71,11 @@ function MenuItem({ name, link, icon, multi, submenu }: MenuProps) {
       {multi && (
         <>
           <Styled.MenuItemLinkStyled>
-            <NavIcon icon={icon} /> <span>{name}</span> <Icon.ChevronDown />
+            <Styled.LinkIconStyled>
+              <NavIcon icon={icon} />
+            </Styled.LinkIconStyled>
+            <Styled.LinkTextStyled>{name}</Styled.LinkTextStyled>
+            <Icon.ChevronDown />
           </Styled.MenuItemLinkStyled>
           <Styled.DropdownStyled style={style}>
             {submenu.map((item, index) => (
@@ -82,7 +86,10 @@ function MenuItem({ name, link, icon, multi, submenu }: MenuProps) {
       )}
       {!multi && (
         <Styled.MenuItemLinkStyled href={link}>
-          <NavIcon icon={icon} /> {name}
+          <Styled.LinkIconStyled>
+            <NavIcon icon={icon} />
+          </Styled.LinkIconStyled>
+          <Styled.LinkTextStyled>{name}</Styled.LinkTextStyled>
         </Styled.MenuItemLinkStyled>
       )}
     </Styled.MenuItemStyled>

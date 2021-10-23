@@ -27,14 +27,12 @@ const MenuItemLinkStyled = styled.a`
   color: ${(props) => props.theme.colors.secondary};
   cursor: pointer;
   text-decoration: none;
-  font-weight: 500;
   filter: brightness(1);
   transition: filter ${transitionEnd} linear;
 
   svg {
     height: 18px;
     padding: 0;
-    align-self: center;
   }
 
   &:hover {
@@ -89,6 +87,16 @@ const DropdownItemLinkStyled = styled.a`
   }
 `
 
+const LinkIconStyled = styled.span`
+  display: block;
+`
+
+const LinkTextStyled = styled.span`
+  display: block;
+  padding-left: 5px;
+  font-size: 0.8rem;
+`
+
 export {
   NavbarStyled,
   MenuStyled,
@@ -97,4 +105,6 @@ export {
   DropdownStyled,
   DropdownItemStyled,
   DropdownItemLinkStyled,
+  LinkIconStyled,
+  LinkTextStyled,
 }

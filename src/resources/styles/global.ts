@@ -13,6 +13,10 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${(props) => props.theme.fontSizes.base};
     color: ${(props) => props.theme.colors.primary};
   }
+
+  html{
+    line-height: 1;
+  }
 `
 
 export default GlobalStyle
