@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Fira Sans', sans-serif;;
+    font-family: ${(props) => props.theme.fonts.primary};
   }
 
   html{

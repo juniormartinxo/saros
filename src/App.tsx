@@ -1,6 +1,6 @@
 import { Header } from 'components/Header'
 import { Container } from 'components/Container'
-import GlobalStyle from 'resources/global-style'
+import GlobalStyle from 'resources/styles/global'
 import Routes from 'Routes'
 
 function App() {
