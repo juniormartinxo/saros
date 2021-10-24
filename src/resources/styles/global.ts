@@ -9,9 +9,9 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: ${(props) => props.theme.fonts.primary};
-    background-color: ${(props) => props.theme.colors.background};
+    background-color: ${(props) => props.theme.background.body};
     font-size: ${(props) => props.theme.fontSizes.base};
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.fonts.colorPrimary};
   }
 
   html{

@@ -1,16 +1,35 @@
+import { useContext } from 'react'
 import { Navbar } from 'components/Navbar'
+import Switch from 'react-switch'
 import {
   ContainerHeaderStyled,
   HeaderStyled,
-  NavbarStyled,
+  TopbarStyled,
 } from './header.styled'
+import { ThemeContext } from 'styled-components'
+import { shade } from 'polished'
 
-function Header() {
+function Header({ toggleTheme }: any) {
+  const { colors, title } = useContext(ThemeContext)
+
   return (
     <HeaderStyled>
-      <NavbarStyled>
-        <ContainerHeaderStyled>NavbarStyled</ContainerHeaderStyled>
-      </NavbarStyled>
+      <TopbarStyled>
+        <ContainerHeaderStyled>
+          <Switch
+            onChange={toggleTheme}
+            checked={title === 'dark'}
+            checkedIcon={false}
+            uncheckedIcon={false}
+            height={10}
+            width={40}
+            handleDiameter={20}
+            offColor={shade(0.15, colors.primary)}
+            // eslint-disable-next-line react/jsx-handler-names
+            onColor={colors.primary}
+          />
+        </ContainerHeaderStyled>
+      </TopbarStyled>
       <Navbar />
     </HeaderStyled>
   )

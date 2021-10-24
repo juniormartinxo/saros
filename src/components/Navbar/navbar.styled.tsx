@@ -5,7 +5,7 @@ const transitionEnd = '0.3s'
 
 const NavbarStyled = styled.nav`
   display: flex;
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.background.navbar};
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
 `
 
@@ -24,7 +24,7 @@ const MenuItemLinkStyled = styled.a`
   padding: 15px 0;
   margin: 0;
   font-size: 0.9rem;
-  color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) => props.theme.fonts.colorPrimary};
   cursor: pointer;
   text-decoration: none;
   filter: brightness(1);
@@ -36,7 +36,7 @@ const MenuItemLinkStyled = styled.a`
   }
 
   &:hover {
-    color: ${(props) => props.theme.colors.secondary};
+    color: ${(props) => props.theme.fonts.colorSecondary};
     filter: brightness(1.2);
     transition: filter ${transitionStart} linear;
   }
@@ -60,9 +60,9 @@ const DropdownStyled = styled.ul`
   position: absolute;
   top: 58px;
   left: -5px;
-  background-color: #fff;
-  box-shadow: ${(props) => props.theme.colors.shadow} 0px 10px 15px -3px,
-    ${(props) => props.theme.colors.shadow} 0px 4px 6px -2px;
+  background-color: ${(props) => props.theme.background.dropdown};
+  box-shadow: ${(props) => props.theme.background.dropdownShadow} 0px 10px 15px -3px,
+    ${(props) => props.theme.background.dropdownShadow} 0px 4px 6px -2px;
 `
 
 const DropdownItemStyled = styled.li`
@@ -74,7 +74,7 @@ const DropdownItemLinkStyled = styled.a`
   display: block;
   padding: 15px 10px;
   font-size: 0.8rem;
-  color: black;
+  color: ${(props) => props.theme.fonts.colorPrimary};
   cursor: pointer;
   text-decoration: none;
   text-align: left;

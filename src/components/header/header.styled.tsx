@@ -10,19 +10,12 @@ const HeaderStyled = styled.header`
   padding: 0;
 `
 
-const TopbarStyled = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
-`
-
-const NavbarStyled = styled.nav`
+const TopbarStyled = styled.nav`
   display: block;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
-  background-color: ${(props) => props.theme.colors.secondary};
+  background-color: ${(props) => props.theme.background.topbar};
 `
 
-export { ContainerHeaderStyled, HeaderStyled, TopbarStyled, NavbarStyled }
+export { ContainerHeaderStyled, HeaderStyled, TopbarStyled }

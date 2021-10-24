@@ -65,7 +65,7 @@ function MenuItem({ name, link, icon, multi, submenu }: MenuProps) {
         handleStyle(-5, 52, 1)
       }}
       onMouseLeave={() => {
-        handleStyle(-1000, 60, 1)
+        handleStyle(-1000, 60, 0)
       }}
     >
       {multi && (
