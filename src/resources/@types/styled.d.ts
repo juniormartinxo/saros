@@ -1,6 +1,7 @@
 declare module 'styled-components' {
   export interface DefaultTheme {
     title: string
+    version: string
     colors: {
       primary: string
       secondary: string
@@ -11,19 +12,30 @@ declare module 'styled-components' {
       light: string
       dark: string
       white: string
+      shadow: string
     }
-    background: {
-      body: string
-      navbar: string
-      topbar: string
-      dropdown: string
-      dropdownShadow: string
+    topbar: {
+      background: string
+      color: string
+      link: string
+    }
+    navbar: {
+      background: string
+      color: string
+      link: string
+    }
+    body: {
+      background: string
+      color: string
+    }
+    dropdown: {
+      background: string
+      color: string
+      link: string
     }
     fonts: {
       primary: string
       secondary: string
-      colorPrimary: string
-      colorSecondary: string
     }
     fontSizes: {
       base: string

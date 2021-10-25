@@ -1,21 +1,22 @@
 import { useState, useEffect, Dispatch, SetStateAction } from 'react'
+import { DefaultTheme } from 'styled-components'
 
-type Response<T> = [T, Dispatch<SetStateAction<T>>]
+import light from 'resources/styles/themes/light'
+import dark from 'resources/styles/themes/dark'
 
-function useTheme<T>(key: string, initialState: T): Response<T> {
+type Response = [DefaultTheme, Dispatch<SetStateAction<DefaultTheme>>]
+
+function useTheme(): Response {
   const [state, setState] = useState(() => {
-    const storageValue = localStorage.getItem(key)
+    const storageValue = localStorage.getItem('theme')
 
-    if (storageValue) {
-      return JSON.parse(storageValue)
-    } else {
-      return initialState
-    }
+    return storageValue === 'dark' ? dark : light
   })
 
   useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(state))
-  }, [key, state])
+    localStorage.setItem('theme', state.title)
+    console.log('state', state)
+  }, [state])
 
   return [state, setState]
 }

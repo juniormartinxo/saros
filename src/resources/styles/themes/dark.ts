@@ -2,29 +2,41 @@ import { DefaultTheme } from 'styled-components'
 
 const dark: DefaultTheme = {
   title: 'dark',
+  version: '0.0.1',
   colors: {
-    primary: '#0d1321',
-    secondary: '#f0ebd8',
+    primary: '#006d77',
+    secondary: '#d9ead7',
     success: '#34c38f',
     info: '#50a5f1',
     warning: '#f1b44c',
-    danger: '#f46a6a',
+    danger: '#f25f5c',
     light: '#74788d',
     dark: '#343a40',
     white: '#ffffff',
+    shadow: '#343a40',
   },
-  background: {
-    body: '#1d2d44',
-    navbar: '#0d1321',
-    topbar: '#1d2d44',
-    dropdown: '#1d2d44',
-    dropdownShadow: '#000',
+  topbar: {
+    background: '#343a40',
+    color: '#006d77',
+    link: '#006d77',
+  },
+  navbar: {
+    background: '#495057',
+    color: '#d9ead7',
+    link: '#ffe066',
+  },
+  body: {
+    background: '#343a40',
+    color: '#dee2e6',
+  },
+  dropdown: {
+    background: '#495057',
+    color: '#d8d8d8',
+    link: '#d8d8d8',
   },
   fonts: {
     primary: '"Fira Sans", sans-serif',
     secondary: '"DM Sans", sans-serif',
-    colorPrimary: '#f0ebd8',
-    colorSecondary: '#83c5be',
   },
   fontSizes: {
     base: '0,9rem',
