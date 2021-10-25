@@ -62,7 +62,7 @@ function MenuItem({ name, link, icon, multi, submenu }: MenuProps) {
   return (
     <Styled.MenuItemStyled
       onMouseOver={() => {
-        handleStyle(-5, 52, 1)
+        handleStyle(-5, 51, 1)
       }}
       onMouseLeave={() => {
         handleStyle(-1000, 60, 0)

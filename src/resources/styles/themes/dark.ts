@@ -30,7 +30,7 @@ const dark: DefaultTheme = {
     color: '#dee2e6',
   },
   dropdown: {
-    background: '#495057',
+    background: '#252b31',
     color: '#d8d8d8',
     link: '#d8d8d8',
   },
