@@ -73,7 +73,7 @@ const DropdownItemLinkStyled = styled.a`
   display: block;
   padding: 15px 10px;
   font-size: 0.8rem;
-  color: ${(props) => props.theme.topbar.link};
+  color: ${(props) => props.theme.dropdown.link};
   cursor: pointer;
   text-decoration: none;
   text-align: left;

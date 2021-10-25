@@ -1,8 +1,10 @@
 import styled from 'styled-components/macro'
 
 const ContainerHeaderStyled = styled.div`
+  display: flex;
+  width: 90%;
   margin: 0 auto;
-  max-width: 960px;
+  padding: 10px 0;
 `
 
 const HeaderStyled = styled.header`

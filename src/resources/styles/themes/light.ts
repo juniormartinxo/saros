@@ -26,13 +26,13 @@ const light: DefaultTheme = {
     link: '#ffe066',
   },
   body: {
-    background: '#f1faee',
+    background: '#d9ead7', // '#f1faee',
     color: '#006d77',
   },
   dropdown: {
-    background: '#495057',
+    background: '#f1faee',
     color: '#d8d8d8',
-    link: '#d8d8d8',
+    link: '#006d77',
   },
   fonts: {
     primary: '"Fira Sans", sans-serif',
