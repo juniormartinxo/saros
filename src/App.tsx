@@ -1,5 +1,5 @@
 import { Header } from 'components/Header'
-import { Container } from 'components/Container'
+import { Main } from 'components/Main'
 import GlobalStyle from 'resources/styles/global'
 import Routes from 'Routes'
 import { ThemeProvider } from 'styled-components'
@@ -21,9 +21,9 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Header toggleTheme={toggleTheme} />
-      <Container>
+      <Main>
         <Routes />
-      </Container>
+      </Main>
     </ThemeProvider>
   )
 }

@@ -1,12 +1,15 @@
-import { Header } from './components/Header'
-import GlobalStyle from './resources/styles/global'
+import { screen } from '@testing-library/dom'
 import { App } from './App'
+import { render } from '@testing-library/react'
 
-test('renders learn react link', () => {
-  expect(App()).toEqual(
-    <>
-      <GlobalStyle />
-      <Header />
-    </>,
-  )
+describe('Test App', () => {
+  render(<App />)
+
+  it('renderizar o Header', () => {
+    expect(screen.getByRole('header')).toBeInTheDocument()
+  })
+
+  it('renderizar o Main', () => {
+    expect(screen.getByRole('main')).toBeInTheDocument()
+  })
 })
