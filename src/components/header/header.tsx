@@ -13,7 +13,7 @@ function Header({ toggleTheme }: any) {
   const { colors, title } = useContext(ThemeContext)
 
   return (
-    <HeaderStyled>
+    <HeaderStyled role="header">
       <TopbarStyled>
         <ContainerHeaderStyled>
           <Switch

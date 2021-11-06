@@ -1,7 +1,9 @@
+import { Form } from 'components/Form'
+
 function Users() {
   return (
     <>
-      <div>Users</div>
+      <Form />
     </>
   )
 }

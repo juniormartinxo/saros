@@ -1,5 +1,5 @@
 import { Header } from 'components/Header'
-import { Container } from 'components/Container'
+import { Main } from 'components/Main'
 import GlobalStyle from 'resources/styles/global'
 import Routes from 'Routes'
 import { ThemeProvider } from 'styled-components'
@@ -11,8 +11,6 @@ import dark from 'resources/styles/themes/dark'
 function App() {
   const [theme, setTheme] = useTheme()
 
-  console.log('theme', theme)
-
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light)
   }
@@ -21,9 +19,9 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Header toggleTheme={toggleTheme} />
-      <Container>
+      <Main>
         <Routes />
-      </Container>
+      </Main>
     </ThemeProvider>
   )
 }
