@@ -11,8 +11,6 @@ import dark from 'resources/styles/themes/dark'
 function App() {
   const [theme, setTheme] = useTheme()
 
-  console.log('theme', theme)
-
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light)
   }

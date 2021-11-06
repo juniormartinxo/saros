@@ -15,7 +15,6 @@ function useTheme(): Response {
 
   useEffect(() => {
     localStorage.setItem('theme', state.title)
-    console.log('state', state)
   }, [state])
 
   return [state, setState]

@@ -4,12 +4,16 @@ import { render } from '@testing-library/react'
 
 describe('Test App', () => {
   render(<App />)
+  const Header = screen.getByRole('header')
+  // const Main = screen.getByRole('main')
 
   it('renderizar o Header', () => {
-    expect(screen.getByRole('header')).toBeInTheDocument()
+    expect(Header).toBeInTheDocument()
   })
 
+  /*
   it('renderizar o Main', () => {
-    expect(screen.getByRole('main')).toBeInTheDocument()
+    expect(Main).toBeInTheDocument()
   })
+  */
 })
