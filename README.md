@@ -1,6 +1,6 @@
 # Saros
 
-Ainda tô resolvendo o que vai ser este isto aqui
+Um software para auxiliar supervisores de escolas públicas a definirem o quadro de horas dos professores.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
