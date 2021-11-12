@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import * as FormS from 'resources/styles/form.styled'
+import { Container } from 'components/Container'
 
 interface IFormInputs {
   iptFirstName: string
@@ -31,31 +32,33 @@ function Users() {
   const onSubmit = (data: IFormInputs) => console.log(data)
 
   return (
-    <FormS.Form onSubmit={handleSubmit(onSubmit)}>
-      <FormS.Container>
-        <FormS.Input {...register('iptFirstName')} />
-        <p>{errors.iptFirstName?.message}</p>
-      </FormS.Container>
+    <Container>
+      <FormS.Form onSubmit={handleSubmit(onSubmit)}>
+        <FormS.Container>
+          <FormS.Input {...register('iptFirstName')} />
+          <FormS.Errors>{errors.iptFirstName?.message}</FormS.Errors>
+        </FormS.Container>
 
-      <FormS.Container>
-        <FormS.Input {...register('iptLastName')} />
-        <p>{errors.iptLastName?.message}</p>
-      </FormS.Container>
+        <FormS.Container>
+          <FormS.Input {...register('iptLastName')} />
+          <FormS.Errors>{errors.iptLastName?.message}</FormS.Errors>
+        </FormS.Container>
 
-      <FormS.Container>
-        <FormS.Input {...register('iptEmail')} />
-        <p>{errors.iptEmail?.message}</p>
-      </FormS.Container>
+        <FormS.Container>
+          <FormS.Input {...register('iptEmail')} />
+          <FormS.Errors>{errors.iptEmail?.message}</FormS.Errors>
+        </FormS.Container>
 
-      <FormS.Container>
-        <FormS.Input {...register('iptPassword')} />
-        <p>{errors.iptPassword?.message}</p>
-      </FormS.Container>
+        <FormS.Container>
+          <FormS.Input {...register('iptPassword')} />
+          <FormS.Errors>{errors.iptPassword?.message}</FormS.Errors>
+        </FormS.Container>
 
-      <FormS.Container>
-        <button type="submit">Enviar</button>
-      </FormS.Container>
-    </FormS.Form>
+        <FormS.Container>
+          <FormS.Button type="submit">Enviar</FormS.Button>
+        </FormS.Container>
+      </FormS.Form>
+    </Container>
   )
 }
 

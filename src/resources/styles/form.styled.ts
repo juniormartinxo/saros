@@ -5,10 +5,11 @@ const Form = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 70%;
   height: 100%;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  margin: 0 auto;
 `
 
 const Input = styled.input`
@@ -36,4 +37,23 @@ const Container = styled.div`
   border-radius: 0.5rem;
 `
 
-export { Container, Form, Input }
+const Errors = styled.span`
+  color: ${(props) => props.theme.colors.danger};
+  font-size: 0.8rem;
+  margin: 0.5rem;
+`
+
+const Button = styled.button`
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  background-color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.white};
+  cursor: pointer;
+`
+
+export { Container, Form, Input, Errors, Button }
