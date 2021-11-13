@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 
 const ContainerHeaderStyled = styled.div`
   display: flex;
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
   padding: 10px 0;
 `

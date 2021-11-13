@@ -5,11 +5,8 @@ const Form = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70%;
   height: 100%;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  margin: 0 auto;
+  background-color: aliceblue;
 `
 
 const Input = styled.input`
@@ -18,7 +15,6 @@ const Input = styled.input`
   border-radius: 0.2rem;
   border: none;
   padding: 0.5rem;
-  margin: 0.5rem;
   font-size: 1rem;
 
   &:focus {
@@ -40,7 +36,6 @@ const Container = styled.div`
 const Errors = styled.span`
   color: ${(props) => props.theme.colors.danger};
   font-size: 0.8rem;
-  margin: 0.5rem;
 `
 
 const Button = styled.button`
@@ -49,7 +44,7 @@ const Button = styled.button`
   border-radius: 0.5rem;
   border: none;
   padding: 0.5rem;
-  margin: 0.5rem;
+  margin: 0.5rem 0;
   font-size: 1rem;
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.white};
@@ -58,7 +53,7 @@ const Button = styled.button`
 
 const Label = styled.label`
   font-size: 0.8rem;
-  margin: 0.5rem;
+  margin: 0.5rem 0;
   text-align: justify;
 `
 

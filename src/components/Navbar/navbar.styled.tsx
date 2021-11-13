@@ -14,7 +14,7 @@ const MenuStyled = styled.ul`
   justify-content: flex-start;
   list-style: none;
   margin: 0 auto;
-  width: 90%;
+  width: 70%;
 `
 
 const MenuItemLinkStyled = styled.a`
