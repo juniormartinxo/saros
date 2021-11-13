@@ -7,7 +7,7 @@ import { Curriculum } from './pages/Curriculum'
 import { Subjects } from './pages/Subjects'
 import { Teachers } from './pages/Teachers'
 import { Timesheets } from './pages/Timesheets'
-import { Users } from './pages/Users'
+import { UsersList } from './pages/Users'
 
 function Routes() {
   return (
@@ -15,7 +15,7 @@ function Routes() {
       <Switch>
         <Route path="/" exact component={Dashboard} />
         <Route path="/login" exact component={Login} />
-        <Route path="/usuarios" exact component={Users} />
+        <Route path="/usuarios" exact component={UsersList} />
         <Route path="/professores" exact component={Teachers} />
         <Route path="/turmas" exact component={Classes} />
         <Route path="/disciplinas" exact component={Subjects} />

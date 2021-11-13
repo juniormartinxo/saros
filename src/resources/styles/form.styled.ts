@@ -15,7 +15,7 @@ const Form = styled.form`
 const Input = styled.input`
   width: 100%;
   height: 2rem;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
   border: none;
   padding: 0.5rem;
   margin: 0.5rem;
@@ -29,7 +29,7 @@ const Input = styled.input`
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -56,4 +56,10 @@ const Button = styled.button`
   cursor: pointer;
 `
 
-export { Container, Form, Input, Errors, Button }
+const Label = styled.label`
+  font-size: 0.8rem;
+  margin: 0.5rem;
+  text-align: justify;
+`
+
+export { Container, Form, Input, Errors, Button, Label }

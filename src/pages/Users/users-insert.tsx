@@ -4,7 +4,7 @@ import * as yup from 'yup'
 import * as FormS from 'resources/styles/form.styled'
 import { Container } from 'components/Container'
 
-interface IFormInputs {
+type IFormInputs = {
   iptFirstName: string
   iptLastName: string
   iptEmail: string
@@ -20,7 +20,7 @@ const schema = yup
   })
   .required()
 
-function Users() {
+function UsersInsert() {
   const {
     register,
     handleSubmit,
@@ -35,23 +35,21 @@ function Users() {
     <Container>
       <FormS.Form onSubmit={handleSubmit(onSubmit)}>
         <FormS.Container>
+          <FormS.Label htmlFor="iptFirstName">Nome</FormS.Label>
           <FormS.Input {...register('iptFirstName')} />
           <FormS.Errors>{errors.iptFirstName?.message}</FormS.Errors>
         </FormS.Container>
 
         <FormS.Container>
+          <FormS.Label htmlFor="iptFirstName">Sobrenome</FormS.Label>
           <FormS.Input {...register('iptLastName')} />
           <FormS.Errors>{errors.iptLastName?.message}</FormS.Errors>
         </FormS.Container>
 
         <FormS.Container>
+          <FormS.Label htmlFor="iptFirstName">E-mail</FormS.Label>
           <FormS.Input {...register('iptEmail')} />
           <FormS.Errors>{errors.iptEmail?.message}</FormS.Errors>
-        </FormS.Container>
-
-        <FormS.Container>
-          <FormS.Input {...register('iptPassword')} />
-          <FormS.Errors>{errors.iptPassword?.message}</FormS.Errors>
         </FormS.Container>
 
         <FormS.Container>
@@ -62,4 +60,4 @@ function Users() {
   )
 }
 
-export { Users }
+export { UsersInsert }
