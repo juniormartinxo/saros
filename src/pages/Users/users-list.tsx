@@ -15,32 +15,32 @@ function UsersList() {
         </Grid.Head>
         <Grid.Body>
           <Grid.Row>
-            <Grid.Cell>Aluisio</Grid.Cell>
-            <Grid.Cell>Martins Junior</Grid.Cell>
+            <Grid.Cell>Junior</Grid.Cell>
+            <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
               <button type="button">editar</button>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Cell>Aluisio</Grid.Cell>
-            <Grid.Cell>Martins Junior</Grid.Cell>
+            <Grid.Cell>Junior</Grid.Cell>
+            <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
               <button type="button">editar</button>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Cell>Aluisio</Grid.Cell>
-            <Grid.Cell>Martins Junior</Grid.Cell>
+            <Grid.Cell>Junior</Grid.Cell>
+            <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
               <button type="button">editar</button>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
-            <Grid.Cell>Aluisio</Grid.Cell>
-            <Grid.Cell>Martins Junior</Grid.Cell>
+            <Grid.Cell>Junior</Grid.Cell>
+            <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
               <button type="button">editar</button>
