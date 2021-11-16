@@ -33,6 +33,14 @@ declare module 'styled-components' {
       color: string
       link: string
     }
+    grid: {
+      theadBg: string
+      theadColor: string
+      tbodyBg: string
+      tbodyColor: string
+      trNthChildEvenBg: string
+      trNthChildEvenColor: string
+    }
     fonts: {
       primary: string
       secondary: string

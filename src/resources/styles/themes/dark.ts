@@ -29,6 +29,14 @@ const dark: DefaultTheme = {
     background: '#343a40',
     color: '#dee2e6',
   },
+  grid: {
+    theadBg: '#006d77',
+    theadColor: '#d9ead7',
+    tbodyBg: '#d9ead7',
+    tbodyColor: '#006d77',
+    trNthChildEvenBg: '#c3e9ec',
+    trNthChildEvenColor: '#006d77',
+  },
   dropdown: {
     background: '#252b31',
     color: '#d8d8d8',

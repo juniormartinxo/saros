@@ -50,6 +50,14 @@
     "web-vitals": "2.1.0",
     "yup": "0.32.11"
   },
+  "devDependencies": {
+    "@babel/preset-env": "7.15.8",
+    "@babel/preset-react": "7.14.5",
+    "@types/react-router-dom": "5.3.1",
+    "eslint-plugin-jest-dom": "3.9.2",
+    "eslint-plugin-testing-library": "4.12.4",
+    "react-test-renderer": "17.0.2"
+  },
   "eslintConfig": {
     "extends": "./.eslintrc.json"
   },
@@ -67,13 +75,5 @@
       "last 1 opera version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/preset-env": "7.15.8",
-    "@babel/preset-react": "7.14.5",
-    "@types/react-router-dom": "5.3.1",
-    "eslint-plugin-jest-dom": "3.9.2",
-    "eslint-plugin-testing-library": "4.12.4",
-    "react-test-renderer": "17.0.2"
   }
 }

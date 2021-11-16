@@ -34,6 +34,14 @@ const light: DefaultTheme = {
     color: '#d8d8d8',
     link: '#006d77',
   },
+  grid: {
+    theadBg: '#006d77',
+    theadColor: '#d9ead7',
+    tbodyBg: '#fff',
+    tbodyColor: '#006d77',
+    trNthChildEvenBg: '#c3e9ec',
+    trNthChildEvenColor: '#006d77',
+  },
   fonts: {
     primary: '"Fira Sans", sans-serif',
     secondary: '"DM Sans", sans-serif',
