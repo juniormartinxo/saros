@@ -48,6 +48,7 @@ declare module 'styled-components' {
     fontSizes: {
       base: string
       small: string
+      normal: string
       medium: string
       large: string
     }

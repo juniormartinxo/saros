@@ -60,4 +60,4 @@ function UsersEdit() {
   )
 }
 
-export { UsersEdit }
+export default UsersEdit

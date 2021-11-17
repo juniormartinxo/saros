@@ -47,8 +47,9 @@ const light: DefaultTheme = {
     secondary: '"DM Sans", sans-serif',
   },
   fontSizes: {
-    base: '0,9rem',
-    small: '1.2rem',
+    base: '0.6rem',
+    small: '0.8rem',
+    normal: '1rem',
     medium: '1.6rem',
     large: '2.4rem',
   },

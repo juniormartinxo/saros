@@ -28,9 +28,25 @@ const Row = styled.tr`
   }
 `
 
+const Link = styled.a`
+  background-color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.white};
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: ${(props) => props.theme.fontSizes.small};
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    filter: brightness(120%);
+  }
+`
+
 const Cell = styled.td`
   padding: 0.5rem;
   text-align: ${(props) => props.align};
+  text-align: center;
 `
 
-export { Grid, Head, Body, Row, Cell }
+export { Grid, Head, Body, Row, Cell, Link }

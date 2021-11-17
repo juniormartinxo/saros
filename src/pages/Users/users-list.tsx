@@ -7,9 +7,9 @@ function UsersList() {
       <Grid.Grid>
         <Grid.Head>
           <Grid.Row>
-            <Grid.Cell align="center">First Name</Grid.Cell>
-            <Grid.Cell align="center">Last Name</Grid.Cell>
-            <Grid.Cell align="center">Email</Grid.Cell>
+            <Grid.Cell>First Name</Grid.Cell>
+            <Grid.Cell>Last Name</Grid.Cell>
+            <Grid.Cell>Email</Grid.Cell>
             <Grid.Cell />
           </Grid.Row>
         </Grid.Head>
@@ -19,7 +19,9 @@ function UsersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <button type="button">editar</button>
+              <Grid.Link type="button" href="/usuarios/e">
+                editar
+              </Grid.Link>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
@@ -27,7 +29,9 @@ function UsersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <button type="button">editar</button>
+              <Grid.Link type="button" href="/usuarios/e">
+                editar
+              </Grid.Link>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
@@ -35,7 +39,9 @@ function UsersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <button type="button">editar</button>
+              <Grid.Link type="button" href="/usuarios/e">
+                editar
+              </Grid.Link>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
@@ -43,7 +49,9 @@ function UsersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <button type="button">editar</button>
+              <Grid.Link type="button" href="/usuarios/e">
+                editar
+              </Grid.Link>
             </Grid.Cell>
           </Grid.Row>
         </Grid.Body>
