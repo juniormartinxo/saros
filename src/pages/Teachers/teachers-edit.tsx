@@ -19,7 +19,7 @@ const schema = yup
   .required()
 
 function TeachersEdit() {
-  const { userId } = useParams<{ userId: string }>()
+  const { id } = useParams<{ id: string }>()
 
   const {
     register,
@@ -34,7 +34,7 @@ function TeachersEdit() {
   return (
     <>
       <Container>
-        <Link to="/professores">Voltar {userId}</Link>
+        <Link to="/professores">Voltar {id}</Link>
       </Container>
       <Container>
         <FormS.Form onSubmit={handleSubmit(onSubmit)}>
