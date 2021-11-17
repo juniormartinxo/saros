@@ -1,7 +1,7 @@
 import * as Grid from 'resources/styles/grid.styled'
 import { Container } from 'components/Container'
 
-function TeachersList() {
+function ClassesList() {
   return (
     <Container>
       <Grid.Grid>
@@ -19,7 +19,7 @@ function TeachersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.Link type="button" href="/professor/5">
+              <Grid.Link type="button" href="/turma/5">
                 editar
               </Grid.Link>
             </Grid.Cell>
@@ -29,7 +29,7 @@ function TeachersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.Link type="button" href="/professor/1">
+              <Grid.Link type="button" href="/turma/1">
                 editar
               </Grid.Link>
             </Grid.Cell>
@@ -39,7 +39,7 @@ function TeachersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.Link type="button" href="/professor/2">
+              <Grid.Link type="button" href="/turma/2">
                 editar
               </Grid.Link>
             </Grid.Cell>
@@ -49,7 +49,7 @@ function TeachersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.Link type="button" href="/professor/3">
+              <Grid.Link type="button" href="/turma/3">
                 editar
               </Grid.Link>
             </Grid.Cell>
@@ -60,4 +60,4 @@ function TeachersList() {
   )
 }
 
-export { TeachersList }
+export { ClassesList }

@@ -19,7 +19,7 @@ function UsersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.Link type="button" href="/usuario/e/5">
+              <Grid.Link type="button" href="/usuario/5">
                 editar
               </Grid.Link>
             </Grid.Cell>
@@ -29,7 +29,7 @@ function UsersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.Link type="button" href="/usuario/e/1">
+              <Grid.Link type="button" href="/usuario/1">
                 editar
               </Grid.Link>
             </Grid.Cell>
@@ -39,7 +39,7 @@ function UsersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.Link type="button" href="/usuario/e/2">
+              <Grid.Link type="button" href="/usuario/2">
                 editar
               </Grid.Link>
             </Grid.Cell>
@@ -49,7 +49,7 @@ function UsersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.Link type="button" href="/usuario/e/3">
+              <Grid.Link type="button" href="/usuario/3">
                 editar
               </Grid.Link>
             </Grid.Cell>
