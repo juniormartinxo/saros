@@ -18,7 +18,7 @@ const schema = yup
   })
   .required()
 
-function UsersEdit() {
+function TeachersEdit() {
   const { userId } = useParams<{ userId: string }>()
 
   const {
@@ -34,7 +34,7 @@ function UsersEdit() {
   return (
     <>
       <Container>
-        <Link to="/usuarios">Voltar {userId}</Link>
+        <Link to="/professores">Voltar {userId}</Link>
       </Container>
       <Container>
         <FormS.Form onSubmit={handleSubmit(onSubmit)}>
@@ -59,4 +59,4 @@ function UsersEdit() {
   )
 }
 
-export default UsersEdit
+export default TeachersEdit

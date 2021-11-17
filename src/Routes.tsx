@@ -5,10 +5,11 @@ import { Login } from './pages/Login'
 import { Classes } from './pages/Classes'
 import { Curriculum } from './pages/Curriculum'
 import { Subjects } from './pages/Subjects'
-import { Teachers } from './pages/Teachers'
+import { TeachersList } from './pages/Teachers'
 import { Timesheets } from './pages/Timesheets'
 import { UsersList } from './pages/Users'
 import UsersEdit from './pages/Users/users-edit'
+import TeachersEdit from './pages/Teachers/teachers-edit'
 
 function Routes() {
   return (
@@ -18,7 +19,8 @@ function Routes() {
         <Route path="/login" exact component={Login} />
         <Route path="/usuarios" exact component={UsersList} />
         <Route path="/usuarios/e/:userId" exact component={UsersEdit} />
-        <Route path="/professores" exact component={Teachers} />
+        <Route path="/professores" exact component={TeachersList} />
+        <Route path="/professores/e/:userId" exact component={TeachersEdit} />
         <Route path="/turmas" exact component={Classes} />
         <Route path="/disciplinas" exact component={Subjects} />
         <Route path="/matriz-curricular" exact component={Curriculum} />
