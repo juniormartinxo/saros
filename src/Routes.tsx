@@ -17,7 +17,7 @@ function Routes() {
         <Route path="/" exact component={Dashboard} />
         <Route path="/login" exact component={Login} />
         <Route path="/usuarios" exact component={UsersList} />
-        <Route path="/usuarios/e/" exact component={UsersEdit} />
+        <Route path="/usuarios/e/:userId" exact component={UsersEdit} />
         <Route path="/professores" exact component={Teachers} />
         <Route path="/turmas" exact component={Classes} />
         <Route path="/disciplinas" exact component={Subjects} />

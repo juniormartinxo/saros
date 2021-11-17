@@ -3,6 +3,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import * as FormS from 'resources/styles/form.styled'
 import { Container } from 'components/Container'
+// import { useParams } from 'react-router-dom'
 
 type IFormInputs = {
   iptFirstName: string
@@ -21,6 +22,8 @@ const schema = yup
   .required()
 
 function UsersEdit() {
+  // const { userId } = useParams<{ userId: string }>()
+
   const {
     register,
     handleSubmit,
@@ -32,31 +35,36 @@ function UsersEdit() {
   const onSubmit = (data: IFormInputs) => console.log(data)
 
   return (
-    <Container>
-      <FormS.Form onSubmit={handleSubmit(onSubmit)}>
-        <FormS.Container>
-          <FormS.Label htmlFor="iptFirstName">Nome</FormS.Label>
-          <FormS.Input {...register('iptFirstName')} />
-          <FormS.Errors>{errors.iptFirstName?.message}</FormS.Errors>
-        </FormS.Container>
+    <>
+      <Container>
+        <a href="" />
+      </Container>
+      <Container>
+        <FormS.Form onSubmit={handleSubmit(onSubmit)}>
+          <FormS.Container>
+            <FormS.Label htmlFor="iptFirstName">Nome</FormS.Label>
+            <FormS.Input {...register('iptFirstName')} />
+            <FormS.Errors>{errors.iptFirstName?.message}</FormS.Errors>
+          </FormS.Container>
 
-        <FormS.Container>
-          <FormS.Label htmlFor="iptFirstName">Sobrenome</FormS.Label>
-          <FormS.Input {...register('iptLastName')} />
-          <FormS.Errors>{errors.iptLastName?.message}</FormS.Errors>
-        </FormS.Container>
+          <FormS.Container>
+            <FormS.Label htmlFor="iptFirstName">Sobrenome</FormS.Label>
+            <FormS.Input {...register('iptLastName')} />
+            <FormS.Errors>{errors.iptLastName?.message}</FormS.Errors>
+          </FormS.Container>
 
-        <FormS.Container>
-          <FormS.Label htmlFor="iptFirstName">E-mail</FormS.Label>
-          <FormS.Input {...register('iptEmail')} />
-          <FormS.Errors>{errors.iptEmail?.message}</FormS.Errors>
-        </FormS.Container>
+          <FormS.Container>
+            <FormS.Label htmlFor="iptFirstName">E-mail</FormS.Label>
+            <FormS.Input {...register('iptEmail')} />
+            <FormS.Errors>{errors.iptEmail?.message}</FormS.Errors>
+          </FormS.Container>
 
-        <FormS.Container>
-          <FormS.Button type="submit">Enviar</FormS.Button>
-        </FormS.Container>
-      </FormS.Form>
-    </Container>
+          <FormS.Container>
+            <FormS.Button type="submit">Enviar</FormS.Button>
+          </FormS.Container>
+        </FormS.Form>
+      </Container>
+    </>
   )
 }
 

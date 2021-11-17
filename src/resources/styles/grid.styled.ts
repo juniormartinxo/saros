@@ -29,6 +29,7 @@ const Row = styled.tr`
 `
 
 const Link = styled.a`
+  text-decoration: none;
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.white};
   border: none;
