@@ -3,7 +3,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import * as FormS from 'resources/styles/form.styled'
 import { Container } from 'components/Container'
-// import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 type IFormInputs = {
   iptFirstName: string
@@ -22,7 +22,7 @@ const schema = yup
   .required()
 
 function UsersEdit() {
-  // const { userId } = useParams<{ userId: string }>()
+  const { userId } = useParams<{ userId: string }>()
 
   const {
     register,
@@ -37,7 +37,7 @@ function UsersEdit() {
   return (
     <>
       <Container>
-        <a href="" />
+        <a href="/usuarios">Voltar {userId}</a>
       </Container>
       <Container>
         <FormS.Form onSubmit={handleSubmit(onSubmit)}>
