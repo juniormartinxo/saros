@@ -4,6 +4,7 @@ import { Container } from 'components/Container'
 function TeachersList() {
   return (
     <Container>
+      <h2>Professores</h2>
       <Grid.Grid>
         <Grid.Head>
           <Grid.Row>

@@ -4,6 +4,7 @@ import { Container } from 'components/Container'
 function SubjectsList() {
   return (
     <Container>
+      <h2>Disciplinas</h2>
       <Grid.Grid>
         <Grid.Head>
           <Grid.Row>

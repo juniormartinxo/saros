@@ -4,6 +4,7 @@ import { Container } from 'components/Container'
 function ClassesList() {
   return (
     <Container>
+      <h2>Turmas</h2>
       <Grid.Grid>
         <Grid.Head>
           <Grid.Row>
