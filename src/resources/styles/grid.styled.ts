@@ -52,7 +52,7 @@ const Title = styled.h1`
 
 const ContainerButtons = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 5px;
 `
@@ -60,9 +60,13 @@ const ContainerButtons = styled.div`
 const borderButtons = '3px'
 
 const ButtonActs = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
   border: none;
   border-radius: ${borderButtons};
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   font-size: ${(props) => props.theme.fontSizes.small};
   cursor: pointer;
   text-decoration: none;

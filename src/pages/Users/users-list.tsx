@@ -11,7 +11,7 @@ function UsersList() {
       <Grid.Header>
         <Grid.Title>Usuários</Grid.Title>
         <Grid.ContainerButtons>
-          <Grid.ButtonNew href="/usuario/novo">
+          <Grid.ButtonNew href="/usuario/novo" title="Inserir novo">
             <IconUserPlus h={16} /> novo
           </Grid.ButtonNew>
         </Grid.ContainerButtons>
@@ -31,9 +31,15 @@ function UsersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.ButtonEdit type="button" href="/usuario/e/5">
-                <IconEdit h={16} />
-              </Grid.ButtonEdit>
+              <Grid.ContainerButtons>
+                <Grid.ButtonEdit
+                  type="button"
+                  href="/usuario/e/1"
+                  title="Editar"
+                >
+                  <IconEdit h={16} /> editar
+                </Grid.ButtonEdit>
+              </Grid.ContainerButtons>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
@@ -41,9 +47,15 @@ function UsersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.ButtonEdit type="button" href="/usuario/e/1">
-                editar
-              </Grid.ButtonEdit>
+              <Grid.ContainerButtons>
+                <Grid.ButtonEdit
+                  type="button"
+                  href="/usuario/e/2"
+                  title="Editar"
+                >
+                  <IconEdit h={16} /> editar
+                </Grid.ButtonEdit>
+              </Grid.ContainerButtons>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
@@ -51,9 +63,15 @@ function UsersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.ButtonEdit type="button" href="/usuario/e/2">
-                editar
-              </Grid.ButtonEdit>
+              <Grid.ContainerButtons>
+                <Grid.ButtonEdit
+                  type="button"
+                  href="/usuario/e/3"
+                  title="Editar"
+                >
+                  <IconEdit h={16} /> editar
+                </Grid.ButtonEdit>
+              </Grid.ContainerButtons>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
@@ -61,9 +79,15 @@ function UsersList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.ButtonEdit type="button" href="/usuario/e/3">
-                editar
-              </Grid.ButtonEdit>
+              <Grid.ContainerButtons>
+                <Grid.ButtonEdit
+                  type="button"
+                  href="/usuario/e/4"
+                  title="Editar"
+                >
+                  <IconEdit h={16} /> editar
+                </Grid.ButtonEdit>
+              </Grid.ContainerButtons>
             </Grid.Cell>
           </Grid.Row>
         </Grid.Body>
