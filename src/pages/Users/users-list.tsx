@@ -1,13 +1,19 @@
 import * as Grid from 'resources/styles/grid.styled'
 import { Container } from 'components/Container'
 
+// import * as Icon from 'resources/ui/icons'
+
+import { IconEdit, IconUserPlus } from 'components/Icons'
+
 function UsersList() {
   return (
     <Container>
       <Grid.Header>
         <Grid.Title>Usuários</Grid.Title>
         <Grid.ContainerButtons>
-          <Grid.ButtonNew href="/usuario/novo">Novo</Grid.ButtonNew>
+          <Grid.ButtonNew href="/usuario/novo">
+            <IconUserPlus h={16} /> novo
+          </Grid.ButtonNew>
         </Grid.ContainerButtons>
       </Grid.Header>
       <Grid.Grid>
@@ -26,7 +32,7 @@ function UsersList() {
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
               <Grid.ButtonEdit type="button" href="/usuario/e/5">
-                editar
+                <IconEdit h={16} />
               </Grid.ButtonEdit>
             </Grid.Cell>
           </Grid.Row>
