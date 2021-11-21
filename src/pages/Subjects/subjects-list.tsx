@@ -20,9 +20,9 @@ function SubjectsList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.Link type="button" href="/disciplina/5">
+              <Grid.ButtonEdit type="button" href="/disciplina/5">
                 editar
-              </Grid.Link>
+              </Grid.ButtonEdit>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
@@ -30,9 +30,9 @@ function SubjectsList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.Link type="button" href="/disciplina/1">
+              <Grid.ButtonEdit type="button" href="/disciplina/1">
                 editar
-              </Grid.Link>
+              </Grid.ButtonEdit>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
@@ -40,9 +40,9 @@ function SubjectsList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.Link type="button" href="/disciplina/2">
+              <Grid.ButtonEdit type="button" href="/disciplina/2">
                 editar
-              </Grid.Link>
+              </Grid.ButtonEdit>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
@@ -50,9 +50,9 @@ function SubjectsList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.Link type="button" href="/disciplina/3">
+              <Grid.ButtonEdit type="button" href="/disciplina/3">
                 editar
-              </Grid.Link>
+              </Grid.ButtonEdit>
             </Grid.Cell>
           </Grid.Row>
         </Grid.Body>

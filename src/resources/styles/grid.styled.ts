@@ -28,22 +28,6 @@ const Row = styled.tr`
   }
 `
 
-const Link = styled.a`
-  text-decoration: none;
-  background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.white};
-  border: none;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  font-size: ${(props) => props.theme.fontSizes.small};
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    filter: brightness(120%);
-  }
-`
-
 const Cell = styled.td`
   padding: 0.5rem;
   text-align: ${(props) => props.align};
@@ -54,7 +38,7 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px 15px;
+  padding: 0 0 15px 0;
   border-bottom: 1px solid ${(props) => props.theme.colors.primary};
   width: 100%;
   margin-bottom: 15px;
@@ -63,6 +47,57 @@ const Header = styled.header`
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontSizes.medium};
   font-weight: 500;
+  margin: 0;
 `
 
-export { Grid, Head, Body, Row, Cell, Link, Header, Title }
+const ContainerButtons = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+`
+
+const borderButtons = '3px'
+
+const ButtonActs = styled.a`
+  border: none;
+  border-radius: ${borderButtons};
+  padding: 0.5rem 1rem;
+  font-size: ${(props) => props.theme.fontSizes.small};
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    filter: brightness(120%);
+  }
+`
+
+const ButtonEdit = styled(ButtonActs)`
+  background-color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.white};
+`
+const ButtonNew = styled(ButtonActs)`
+  background-color: ${(props) => props.theme.colors.danger};
+  color: ${(props) => props.theme.colors.white};
+`
+
+const ButtonList = styled(ButtonActs)`
+  background-color: ${(props) => props.theme.colors.info};
+  color: ${(props) => props.theme.colors.white};
+`
+
+export {
+  Grid,
+  Head,
+  Body,
+  Row,
+  Cell,
+  Header,
+  Title,
+  ContainerButtons,
+  ButtonEdit,
+  ButtonNew,
+  ButtonList,
+}

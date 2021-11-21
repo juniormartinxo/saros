@@ -7,7 +7,7 @@ import { Curriculum } from './pages/Curriculum'
 import { SubjectsList } from './pages/Subjects'
 import { TeachersList } from './pages/Teachers'
 import { Timesheets } from './pages/Timesheets'
-import { UsersList } from './pages/Users'
+import { UsersList, UsersInsert } from './pages/Users'
 import UsersEdit from './pages/Users/users-edit'
 import TeachersEdit from './pages/Teachers/teachers-edit'
 import SubjectsEdit from './pages/Subjects/subjects-edit'
@@ -20,13 +20,14 @@ function Routes() {
         <Route path="/" exact component={Dashboard} />
         <Route path="/login" exact component={Login} />
         <Route path="/usuarios" exact component={UsersList} />
-        <Route path="/usuario/:id" exact component={UsersEdit} />
+        <Route path="/usuario/e/:id" exact component={UsersEdit} />
+        <Route path="/usuario/novo" exact component={UsersInsert} />
         <Route path="/professores" exact component={TeachersList} />
-        <Route path="/professor/:id" exact component={TeachersEdit} />
+        <Route path="/professor/e/:id" exact component={TeachersEdit} />
         <Route path="/turmas" exact component={ClassesList} />
-        <Route path="/turma/:id" exact component={ClassesEdit} />
+        <Route path="/turma/e/:id" exact component={ClassesEdit} />
         <Route path="/disciplinas" exact component={SubjectsList} />
-        <Route path="/disciplina/:id" exact component={SubjectsEdit} />
+        <Route path="/disciplina/e/:id" exact component={SubjectsEdit} />
         <Route path="/matriz-curricular" exact component={Curriculum} />
         <Route path="/quadro-horario" exact component={Timesheets} />
       </Switch>
