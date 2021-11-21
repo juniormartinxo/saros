@@ -57,7 +57,7 @@ const ContainerButtons = styled.div`
   gap: 5px;
 `
 
-const borderButtons = '3px'
+const borderRadius = '3px'
 
 const ButtonActs = styled.a`
   display: flex;
@@ -65,7 +65,7 @@ const ButtonActs = styled.a`
   align-items: center;
   gap: 3px;
   border: none;
-  border-radius: ${borderButtons};
+  border-radius: ${borderRadius};
   padding: 0.5rem;
   font-size: ${(props) => props.theme.fontSizes.small};
   cursor: pointer;

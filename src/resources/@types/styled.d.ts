@@ -14,6 +14,20 @@ declare module 'styled-components' {
       white: string
       shadow: string
     }
+    fonts: {
+      primary: string
+      secondary: string
+    }
+    fontSizes: {
+      base: string
+      small: string
+      normal: string
+      medium: string
+      large: string
+    }
+    button: {
+      borderRadius: string
+    }
     topbar: {
       background: string
       color: string
@@ -40,17 +54,6 @@ declare module 'styled-components' {
       tbodyColor: string
       trNthChildEvenBg: string
       trNthChildEvenColor: string
-    }
-    fonts: {
-      primary: string
-      secondary: string
-    }
-    fontSizes: {
-      base: string
-      small: string
-      normal: string
-      medium: string
-      large: string
     }
     breakpoints: {
       mobile: string

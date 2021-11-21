@@ -15,6 +15,20 @@ const light: DefaultTheme = {
     white: '#ffffff',
     shadow: '#d8d8d8',
   },
+  fonts: {
+    primary: '"Fira Sans", sans-serif',
+    secondary: '"DM Sans", sans-serif',
+  },
+  fontSizes: {
+    base: '0.6rem',
+    small: '0.8rem',
+    normal: '1rem',
+    medium: '1.6rem',
+    large: '2.4rem',
+  },
+  button: {
+    borderRadius: '0.2rem',
+  },
   topbar: {
     background: '#d9ead7',
     color: '#006d77',
@@ -41,17 +55,6 @@ const light: DefaultTheme = {
     tbodyColor: '#006d77',
     trNthChildEvenBg: '#c3e9ec',
     trNthChildEvenColor: '#006d77',
-  },
-  fonts: {
-    primary: '"Fira Sans", sans-serif',
-    secondary: '"DM Sans", sans-serif',
-  },
-  fontSizes: {
-    base: '0.6rem',
-    small: '0.8rem',
-    normal: '1rem',
-    medium: '1.6rem',
-    large: '2.4rem',
   },
   breakpoints: {
     mobile: '414px',

@@ -1,8 +1,9 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import * as FormS from 'resources/styles/form.styled'
+import * as Form from 'resources/styles/form.styled'
 import { Container } from 'components/Container'
+import { IconSave } from 'components/Icons'
 
 type IFormInputs = {
   iptFirstName: string
@@ -33,29 +34,31 @@ function UsersInsert() {
 
   return (
     <Container>
-      <FormS.Form onSubmit={handleSubmit(onSubmit)}>
-        <FormS.Container>
-          <FormS.Label htmlFor="iptFirstName">Nome</FormS.Label>
-          <FormS.Input {...register('iptFirstName')} />
-          <FormS.Errors>{errors.iptFirstName?.message}</FormS.Errors>
-        </FormS.Container>
+      <Form.Form onSubmit={handleSubmit(onSubmit)}>
+        <Form.Container>
+          <Form.Label htmlFor="iptFirstName">Nome</Form.Label>
+          <Form.Input {...register('iptFirstName')} />
+          <Form.Errors>{errors.iptFirstName?.message}</Form.Errors>
+        </Form.Container>
 
-        <FormS.Container>
-          <FormS.Label htmlFor="iptFirstName">Sobrenome</FormS.Label>
-          <FormS.Input {...register('iptLastName')} />
-          <FormS.Errors>{errors.iptLastName?.message}</FormS.Errors>
-        </FormS.Container>
+        <Form.Container>
+          <Form.Label htmlFor="iptFirstName">Sobrenome</Form.Label>
+          <Form.Input {...register('iptLastName')} />
+          <Form.Errors>{errors.iptLastName?.message}</Form.Errors>
+        </Form.Container>
 
-        <FormS.Container>
-          <FormS.Label htmlFor="iptFirstName">E-mail</FormS.Label>
-          <FormS.Input {...register('iptEmail')} />
-          <FormS.Errors>{errors.iptEmail?.message}</FormS.Errors>
-        </FormS.Container>
+        <Form.Container>
+          <Form.Label htmlFor="iptFirstName">E-mail</Form.Label>
+          <Form.Input {...register('iptEmail')} />
+          <Form.Errors>{errors.iptEmail?.message}</Form.Errors>
+        </Form.Container>
 
-        <FormS.Container>
-          <FormS.Button type="submit">Enviar</FormS.Button>
-        </FormS.Container>
-      </FormS.Form>
+        <Form.Container>
+          <Form.Button type="submit">
+            <IconSave h={16} /> Gravar
+          </Form.Button>
+        </Form.Container>
+      </Form.Form>
     </Container>
   )
 }

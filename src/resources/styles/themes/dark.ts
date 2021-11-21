@@ -15,6 +15,20 @@ const dark: DefaultTheme = {
     white: '#ffffff',
     shadow: '#343a40',
   },
+  fonts: {
+    primary: '"Fira Sans", sans-serif',
+    secondary: '"DM Sans", sans-serif',
+  },
+  fontSizes: {
+    base: '0.6rem',
+    small: '0.8rem',
+    normal: '1rem',
+    medium: '1.6rem',
+    large: '2.4rem',
+  },
+  button: {
+    borderRadius: '0.2rem',
+  },
   topbar: {
     background: '#343a40',
     color: '#006d77',
@@ -41,17 +55,6 @@ const dark: DefaultTheme = {
     background: '#252b31',
     color: '#d8d8d8',
     link: '#d8d8d8',
-  },
-  fonts: {
-    primary: '"Fira Sans", sans-serif',
-    secondary: '"DM Sans", sans-serif',
-  },
-  fontSizes: {
-    base: '0.6rem',
-    small: '0.8rem',
-    normal: '1rem',
-    medium: '1.6rem',
-    large: '2.4rem',
   },
   breakpoints: {
     mobile: '414px',
