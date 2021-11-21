@@ -4,7 +4,9 @@ import { Container } from 'components/Container'
 function UsersList() {
   return (
     <Container>
-      <h2>Usuários</h2>
+      <Grid.Header>
+        <Grid.Title>Usuários</Grid.Title>
+      </Grid.Header>
       <Grid.Grid>
         <Grid.Head>
           <Grid.Row>

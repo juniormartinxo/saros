@@ -50,4 +50,19 @@ const Cell = styled.td`
   text-align: center;
 `
 
-export { Grid, Head, Body, Row, Cell, Link }
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px 15px;
+  border-bottom: 1px solid ${(props) => props.theme.colors.primary};
+  width: 100%;
+  margin-bottom: 15px;
+`
+
+const Title = styled.h1`
+  font-size: ${(props) => props.theme.fontSizes.medium};
+  font-weight: 500;
+`
+
+export { Grid, Head, Body, Row, Cell, Link, Header, Title }
