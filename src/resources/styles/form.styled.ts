@@ -11,6 +11,17 @@ const Container = styled.div`
   border-radius: 0.5rem;
 `
 
+const ContainerButtons = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+`
+
 const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -65,4 +76,4 @@ const Button = styled.button`
   }
 `
 
-export { Container, Form, Input, Errors, Button, Label }
+export { Container, Form, Input, Errors, Button, Label, ContainerButtons }

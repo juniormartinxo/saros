@@ -4,6 +4,7 @@ import * as yup from 'yup'
 import * as Form from 'resources/styles/form.styled'
 import { Container } from 'components/Container'
 import { IconSave } from 'components/Icons'
+import { Link } from 'components/Link'
 
 type IFormInputs = {
   iptFirstName: string
@@ -53,11 +54,12 @@ function UsersInsert() {
           <Form.Errors>{errors.iptEmail?.message}</Form.Errors>
         </Form.Container>
 
-        <Form.Container>
+        <Form.ContainerButtons>
           <Form.Button type="submit">
             <IconSave h={16} /> Gravar
           </Form.Button>
-        </Form.Container>
+          <Link to="/usuarios">Voltar</Link>
+        </Form.ContainerButtons>
       </Form.Form>
     </Container>
   )
