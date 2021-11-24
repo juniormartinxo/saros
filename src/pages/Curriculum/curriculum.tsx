@@ -1,5 +1,11 @@
+import { Container } from 'components/Container'
+
 function Curriculum() {
-  return <div>Curriculum</div>
+  return (
+    <Container>
+      <h2>Matriz Curricular</h2>
+    </Container>
+  )
 }
 
 export { Curriculum }
