@@ -1,5 +1,7 @@
+import { BoxLogin } from './login.styled'
+
 function Login() {
-  return <div>Login</div>
+  return <BoxLogin>Login</BoxLogin>
 }
 
 export { Login }

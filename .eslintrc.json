@@ -1,4 +1,7 @@
 {
   "extends": ".eslintrc-default.json",
-  "plugins": ["only-warn", "testing-library", "jest-dom"]
+  "plugins": ["only-warn", "testing-library", "jest-dom"],
+  "globals": {
+    "JSX": true
+  }
 }
