@@ -1,10 +1,18 @@
 import * as Grid from 'resources/styles/grid.styled'
 import { Container } from 'components/Container'
+import { IconEdit, IconUserPlus } from 'components/Icons'
 
 function ClassesList() {
   return (
     <Container>
-      <h2>Turmas</h2>
+      <Grid.Header>
+        <Grid.Title>Turmas</Grid.Title>
+        <Grid.ContainerButtons>
+          <Grid.ButtonNew href="/turma/novo" title="Inserir novo">
+            <IconUserPlus h={16} /> novo
+          </Grid.ButtonNew>
+        </Grid.ContainerButtons>
+      </Grid.Header>
       <Grid.Grid>
         <Grid.Head>
           <Grid.Row>
@@ -20,9 +28,11 @@ function ClassesList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.ButtonEdit type="button" href="/turma/5">
-                editar
-              </Grid.ButtonEdit>
+              <Grid.ContainerButtons>
+                <Grid.ButtonEdit type="button" href="/turma/e/1" title="Editar">
+                  <IconEdit h={16} /> editar
+                </Grid.ButtonEdit>
+              </Grid.ContainerButtons>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
@@ -30,9 +40,11 @@ function ClassesList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.ButtonEdit type="button" href="/turma/1">
-                editar
-              </Grid.ButtonEdit>
+              <Grid.ContainerButtons>
+                <Grid.ButtonEdit type="button" href="/turma/e/1" title="Editar">
+                  <IconEdit h={16} /> editar
+                </Grid.ButtonEdit>
+              </Grid.ContainerButtons>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
@@ -40,9 +52,11 @@ function ClassesList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.ButtonEdit type="button" href="/turma/2">
-                editar
-              </Grid.ButtonEdit>
+              <Grid.ContainerButtons>
+                <Grid.ButtonEdit type="button" href="/turma/e/1" title="Editar">
+                  <IconEdit h={16} /> editar
+                </Grid.ButtonEdit>
+              </Grid.ContainerButtons>
             </Grid.Cell>
           </Grid.Row>
           <Grid.Row>
@@ -50,9 +64,11 @@ function ClassesList() {
             <Grid.Cell>Martins</Grid.Cell>
             <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
             <Grid.Cell>
-              <Grid.ButtonEdit type="button" href="/turma/3">
-                editar
-              </Grid.ButtonEdit>
+              <Grid.ContainerButtons>
+                <Grid.ButtonEdit type="button" href="/turma/e/1" title="Editar">
+                  <IconEdit h={16} /> editar
+                </Grid.ButtonEdit>
+              </Grid.ContainerButtons>
             </Grid.Cell>
           </Grid.Row>
         </Grid.Body>

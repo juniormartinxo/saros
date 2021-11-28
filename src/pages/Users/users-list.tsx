@@ -1,8 +1,5 @@
 import * as Grid from 'resources/styles/grid.styled'
 import { Container } from 'components/Container'
-
-// import * as Icon from 'resources/ui/icons'
-
 import { IconEdit, IconUserPlus } from 'components/Icons'
 
 function UsersList() {

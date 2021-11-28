@@ -12,48 +12,23 @@ import UsersEdit from './pages/Users/users-edit'
 import TeachersEdit from './pages/Teachers/teachers-edit'
 import SubjectsEdit from './pages/Subjects/subjects-edit'
 import ClassesEdit from './pages/Classes/classes-edit'
-import { ProtectedLayout } from 'components/ProtectedLayout'
 
 function Routes() {
   return (
     <Router>
       <Switch>
-        <ProtectedLayout>
-          <Route path="/" exact component={Dashboard} />
-        </ProtectedLayout>
-        <ProtectedLayout>
-          <Route path="/usuarios" exact component={UsersList} />
-        </ProtectedLayout>
-        <ProtectedLayout>
-          <Route path="/usuario/e/:id" exact component={UsersEdit} />
-        </ProtectedLayout>
-        <ProtectedLayout>
-          <Route path="/usuario/novo" exact component={UsersInsert} />
-        </ProtectedLayout>
-        <ProtectedLayout>
-          <Route path="/professores" exact component={TeachersList} />
-        </ProtectedLayout>
-        <ProtectedLayout>
-          <Route path="/professor/e/:id" exact component={TeachersEdit} />
-        </ProtectedLayout>
-        <ProtectedLayout>
-          <Route path="/turmas" exact component={ClassesList} />
-        </ProtectedLayout>
-        <ProtectedLayout>
-          <Route path="/turma/e/:id" exact component={ClassesEdit} />
-        </ProtectedLayout>
-        <ProtectedLayout>
-          <Route path="/disciplinas" exact component={SubjectsList} />
-        </ProtectedLayout>
-        <ProtectedLayout>
-          <Route path="/disciplina/e/:id" exact component={SubjectsEdit} />
-        </ProtectedLayout>
-        <ProtectedLayout>
-          <Route path="/matriz-curricular" exact component={Curriculum} />
-        </ProtectedLayout>
-        <ProtectedLayout>
-          <Route path="/quadro-horario" exact component={Timesheets} />
-        </ProtectedLayout>
+        <Route path="/" exact component={Dashboard} />
+        <Route path="/usuarios" exact component={UsersList} />
+        <Route path="/usuario/e/:id" exact component={UsersEdit} />
+        <Route path="/usuario/novo" exact component={UsersInsert} />
+        <Route path="/professores" exact component={TeachersList} />
+        <Route path="/professor/e/:id" exact component={TeachersEdit} />
+        <Route path="/turmas" exact component={ClassesList} />
+        <Route path="/turma/e/:id" exact component={ClassesEdit} />
+        <Route path="/disciplinas" exact component={SubjectsList} />
+        <Route path="/disciplina/e/:id" exact component={SubjectsEdit} />
+        <Route path="/matriz-curricular" exact component={Curriculum} />
+        <Route path="/quadro-horario" exact component={Timesheets} />
         <Route path="/login" exact component={Login} />
       </Switch>
     </Router>
