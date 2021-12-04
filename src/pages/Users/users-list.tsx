@@ -1,8 +1,18 @@
 import * as Grid from 'resources/styles/grid.styled'
 import { Container } from 'components/Container'
 import { IconEdit, IconUserPlus } from 'components/Icons'
+import usersJson from 'users.json'
+
+type UserProps = {
+  id: string
+  firstName: string
+  lastName: string
+  email: string
+}
 
 function UsersList() {
+  const users = usersJson.usuarios
+
   return (
     <Container>
       <Grid.Header>
@@ -23,70 +33,24 @@ function UsersList() {
           </Grid.Row>
         </Grid.Head>
         <Grid.Body>
-          <Grid.Row>
-            <Grid.Cell>Junior</Grid.Cell>
-            <Grid.Cell>Martins</Grid.Cell>
-            <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
-            <Grid.Cell>
-              <Grid.ContainerButtons>
-                <Grid.ButtonEdit
-                  type="button"
-                  href="/usuario/e/1"
-                  title="Editar"
-                >
-                  <IconEdit h={16} /> editar
-                </Grid.ButtonEdit>
-              </Grid.ContainerButtons>
-            </Grid.Cell>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Cell>Junior</Grid.Cell>
-            <Grid.Cell>Martins</Grid.Cell>
-            <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
-            <Grid.Cell>
-              <Grid.ContainerButtons>
-                <Grid.ButtonEdit
-                  type="button"
-                  href="/usuario/e/2"
-                  title="Editar"
-                >
-                  <IconEdit h={16} /> editar
-                </Grid.ButtonEdit>
-              </Grid.ContainerButtons>
-            </Grid.Cell>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Cell>Junior</Grid.Cell>
-            <Grid.Cell>Martins</Grid.Cell>
-            <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
-            <Grid.Cell>
-              <Grid.ContainerButtons>
-                <Grid.ButtonEdit
-                  type="button"
-                  href="/usuario/e/3"
-                  title="Editar"
-                >
-                  <IconEdit h={16} /> editar
-                </Grid.ButtonEdit>
-              </Grid.ContainerButtons>
-            </Grid.Cell>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Cell>Junior</Grid.Cell>
-            <Grid.Cell>Martins</Grid.Cell>
-            <Grid.Cell>amjr.box@gmail.com</Grid.Cell>
-            <Grid.Cell>
-              <Grid.ContainerButtons>
-                <Grid.ButtonEdit
-                  type="button"
-                  href="/usuario/e/4"
-                  title="Editar"
-                >
-                  <IconEdit h={16} /> editar
-                </Grid.ButtonEdit>
-              </Grid.ContainerButtons>
-            </Grid.Cell>
-          </Grid.Row>
+          {users.map((user: UserProps) => (
+            <Grid.Row key={user.id}>
+              <Grid.Cell>{user.firstName}</Grid.Cell>
+              <Grid.Cell>{user.lastName}</Grid.Cell>
+              <Grid.Cell>{user.email}</Grid.Cell>
+              <Grid.Cell>
+                <Grid.ContainerButtons>
+                  <Grid.ButtonEdit
+                    type="button"
+                    href={`/usuario/e/${user.id}`}
+                    title="Editar"
+                  >
+                    <IconEdit h={16} /> editar
+                  </Grid.ButtonEdit>
+                </Grid.ContainerButtons>
+              </Grid.Cell>
+            </Grid.Row>
+          ))}
         </Grid.Body>
       </Grid.Grid>
     </Container>

@@ -1,0 +1,34 @@
+{
+  "usuarios": [
+    {
+      "id": "8549a8cd-de52-477e-ac90-08aaeff32551",
+      "firstName": "Sandra",
+      "lastName": "Mccoy",
+      "email": "sandra@email.com"
+    },
+    {
+      "id": "a8d5d9dd-6e54-4aa4-8759-274b20dc98c0",
+      "firstName": "Mark",
+      "lastName": "Hernandez",
+      "email": "mark@email.com"
+    },
+    {
+      "id": "7d1036ba-d0aa-4eab-8135-6c3d02fe7a00",
+      "firstName": "John",
+      "lastName": "Smith",
+      "email": "john@email.com"
+    },
+    {
+      "id": "1bcb54a6-4d00-4b76-a7f7-afe6d13f974c",
+      "firstName": "Sean",
+      "lastName": "Doe",
+      "email": "sean@email.com"
+    },
+    {
+      "id": "feb613a8-2848-4bbd-8fda-d12c4d977d67",
+      "firstName": "Paul",
+      "lastName": "Jones",
+      "email": "paul@email.com"
+    }
+  ]
+}

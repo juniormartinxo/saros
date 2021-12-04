@@ -5,21 +5,27 @@ import * as FormS from 'resources/styles/form.styled'
 import { Container } from 'components/Container'
 import { useParams } from 'react-router-dom'
 import { Link } from 'components/Link'
+import usersJson from 'users.json'
 
 type IFormInputs = {
   iptFirstName: string
   iptLastName: string
+  iptEmail: string
 }
 
 const schema = yup
   .object({
     iptFirstName: yup.string().required('ops_1'),
     iptLastName: yup.string().required('ops_2'),
+    iptEmail: yup.string().required('ops_3'),
   })
   .required()
 
 function UsersEdit() {
   const { id } = useParams<{ id: string }>()
+  const users = usersJson.usuarios
+
+  const user = users.find((user) => user.id === id)
 
   const {
     register,
@@ -34,20 +40,29 @@ function UsersEdit() {
   return (
     <>
       <Container>
-        <Link to="/usuarios">Voltar {id}</Link>
+        <Link to="/usuarios">Voltar</Link>
       </Container>
       <Container>
         <FormS.Form onSubmit={handleSubmit(onSubmit)}>
           <FormS.Container>
             <FormS.Label htmlFor="iptFirstName">Nome</FormS.Label>
-            <FormS.Input {...register('iptFirstName')} />
+            <FormS.Input
+              {...register('iptFirstName')}
+              value={user?.firstName}
+            />
             <FormS.Errors>{errors.iptFirstName?.message}</FormS.Errors>
           </FormS.Container>
 
           <FormS.Container>
-            <FormS.Label htmlFor="iptFirstName">Sobrenome</FormS.Label>
-            <FormS.Input {...register('iptLastName')} />
+            <FormS.Label htmlFor="iptLastName">Sobrenome</FormS.Label>
+            <FormS.Input {...register('iptLastName')} value={user?.lastName} />
             <FormS.Errors>{errors.iptLastName?.message}</FormS.Errors>
+          </FormS.Container>
+
+          <FormS.Container>
+            <FormS.Label htmlFor="iptEmail">E-mail</FormS.Label>
+            <FormS.Input {...register('iptEmail')} value={user?.email} />
+            <FormS.Errors>{errors.iptEmail?.message}</FormS.Errors>
           </FormS.Container>
 
           <FormS.Container>
