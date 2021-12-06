@@ -40,7 +40,7 @@ const light: DefaultTheme = {
     link: '#ffe066',
   },
   body: {
-    background: '#d9ead7', // '#f1faee',
+    background: '#fff', // '#d9ead7',
     color: '#006d77',
   },
   dropdown: {
