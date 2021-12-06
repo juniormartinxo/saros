@@ -1,6 +1,6 @@
 import * as Grid from 'resources/styles/grid.styled'
 import { Container } from 'components/Container'
-import { IconEdit, IconUserPlus } from 'components/Icons'
+import { IconEdit, IconUserPlus, IconDelete } from 'components/Icons'
 import usersJson from 'users.json'
 
 type UserProps = {
@@ -47,6 +47,10 @@ function UsersList() {
                   >
                     <IconEdit h={16} /> editar
                   </Grid.ButtonEdit>
+
+                  <Grid.ButtonDelete type="button" title="Excluir">
+                    <IconDelete h={16} /> excluir
+                  </Grid.ButtonDelete>
                 </Grid.ContainerButtons>
               </Grid.Cell>
             </Grid.Row>

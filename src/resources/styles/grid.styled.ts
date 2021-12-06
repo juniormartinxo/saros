@@ -82,6 +82,11 @@ const ButtonEdit = styled(ButtonActs)`
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.white};
 `
+
+const ButtonDelete = styled(ButtonActs)`
+  background-color: ${(props) => props.theme.colors.danger};
+  color: ${(props) => props.theme.colors.white};
+`
 const ButtonNew = styled(ButtonActs)`
   background-color: ${(props) => props.theme.colors.danger};
   color: ${(props) => props.theme.colors.white};
@@ -102,6 +107,7 @@ export {
   Title,
   ContainerButtons,
   ButtonEdit,
+  ButtonDelete,
   ButtonNew,
   ButtonList,
 }
