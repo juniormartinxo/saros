@@ -34,6 +34,13 @@ const Cell = styled.td`
   text-align: center;
 `
 
+const CellAction = styled.td`
+  width: 200px;
+  padding: 0.5rem;
+  text-align: ${(props) => props.align};
+  text-align: center;
+`
+
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
@@ -103,6 +110,7 @@ export {
   Body,
   Row,
   Cell,
+  CellAction,
   Header,
   Title,
   ContainerButtons,

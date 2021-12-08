@@ -43,7 +43,7 @@ function UsersList() {
               <Grid.Cell>{user.firstName}</Grid.Cell>
               <Grid.Cell>{user.lastName}</Grid.Cell>
               <Grid.Cell>{user.email}</Grid.Cell>
-              <Grid.Cell>
+              <Grid.CellAction>
                 <Grid.ContainerButtons>
                   <Grid.ButtonEdit
                     type="button"
@@ -61,7 +61,7 @@ function UsersList() {
                     <IconDelete h={16} /> excluir
                   </Grid.ButtonDelete>
                 </Grid.ContainerButtons>
-              </Grid.Cell>
+              </Grid.CellAction>
             </Grid.Row>
           ))}
         </Grid.Body>
