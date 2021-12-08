@@ -2,6 +2,7 @@ import * as Grid from 'resources/styles/grid.styled'
 import { Container } from 'components/Container'
 import { IconEdit, IconUserPlus, IconDelete } from 'components/Icons'
 import usersJson from 'users.json'
+import { useState } from 'react'
 
 type UserProps = {
   id: string
@@ -11,7 +12,11 @@ type UserProps = {
 }
 
 function UsersList() {
-  const users = usersJson.usuarios
+  const [users, setUsers] = useState(usersJson.usuarios)
+
+  function handleDelete(id: string) {
+    setUsers(users.filter((user) => user.id !== id))
+  }
 
   return (
     <Container>
@@ -48,7 +53,11 @@ function UsersList() {
                     <IconEdit h={16} /> editar
                   </Grid.ButtonEdit>
 
-                  <Grid.ButtonDelete type="button" title="Excluir">
+                  <Grid.ButtonDelete
+                    type="button"
+                    title="Excluir"
+                    onClick={() => handleDelete(user.id)}
+                  >
                     <IconDelete h={16} /> excluir
                   </Grid.ButtonDelete>
                 </Grid.ContainerButtons>
