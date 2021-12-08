@@ -19,7 +19,7 @@ const schema = yup
   .required()
 
 function ClassesEdit() {
-  const { id } = useParams<{ id: string }>()
+  const { id } = useParams()
 
   const {
     register,

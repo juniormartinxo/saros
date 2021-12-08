@@ -22,7 +22,7 @@ const schema = yup
   .required()
 
 function UsersEdit() {
-  const { id } = useParams<{ id: string }>()
+  const { id } = useParams()
   const users = usersJson.usuarios
 
   const user = users.find((user) => user.id === id)
@@ -75,4 +75,4 @@ function UsersEdit() {
   )
 }
 
-export default UsersEdit
+export { UsersEdit }
