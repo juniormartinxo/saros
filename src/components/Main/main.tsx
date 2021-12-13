@@ -1,5 +1,5 @@
-import { MainStyled } from './main.styled'
 import { ReactNode } from 'react'
+import { MainStyled } from './main.styled'
 
 type MainProps = {
   children: ReactNode

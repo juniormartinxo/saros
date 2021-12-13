@@ -59,4 +59,4 @@ function ClassesEdit() {
   )
 }
 
-export default ClassesEdit
+export { ClassesEdit }

@@ -59,4 +59,4 @@ function SubjectsEdit() {
   )
 }
 
-export default SubjectsEdit
+export { SubjectsEdit }
