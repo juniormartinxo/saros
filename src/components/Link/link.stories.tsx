@@ -16,6 +16,23 @@ export default {
   decorators: [(story) => <LinkStyled>{story()}</LinkStyled>],
 } as ComponentMeta<typeof Link>
 
+const LinkTemplate: ComponentStory<typeof Link> = (args) => {
+  const { children } = args
+  return <Link {...args}>{children}</Link>
+}
+
+export const LinkTeachers = LinkTemplate.bind({})
+LinkTeachers.args = {
+  children: 'professores',
+  to: '/professor',
+  target: '_blank',
+}
+
+export const LinkUsers = LinkTemplate.bind({})
+LinkUsers.args = { children: 'usuários', to: '/users' }
+
+/*
 export const Default: ComponentStory<typeof Link> = () => {
   return <Link to="/professor">Sou um link</Link>
 }
+*/
