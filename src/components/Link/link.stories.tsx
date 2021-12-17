@@ -2,6 +2,7 @@ import { ComponentStory, ComponentMeta, addDecorator } from '@storybook/react'
 import { Link } from './link'
 import LinkStyled from './link.styled'
 import { withThemesProvider } from 'storybook-addon-styled-component-theme'
+import 'resources/styles/style.css'
 // import { ThemeProvider } from 'styled-components'
 
 import light from 'resources/styles/themes/light'
