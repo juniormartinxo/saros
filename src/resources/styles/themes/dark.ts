@@ -4,8 +4,8 @@ const dark: DefaultTheme = {
   title: 'dark',
   version: '0.0.1',
   colors: {
-    primary: '#d9ead7',
-    secondary: '#d9ead7',
+    primary: '#292c37',
+    secondary: '#74788d',
     success: '#34c38f',
     info: '#50a5f1',
     warning: '#f1b44c',
@@ -13,7 +13,7 @@ const dark: DefaultTheme = {
     light: '#74788d',
     dark: '#343a40',
     white: '#ffffff',
-    shadow: '#343a40',
+    shadow: '#d8d8d8',
   },
   fonts: {
     primary: '"Fira Sans", sans-serif',
@@ -44,12 +44,12 @@ const dark: DefaultTheme = {
     color: '#dee2e6',
   },
   grid: {
-    theadBg: '#006d77',
+    theadBg: '#1c1d1f',
     theadColor: '#d9ead7',
-    tbodyBg: '#d9ead7',
-    tbodyColor: '#006d77',
-    trNthChildEvenBg: '#c3e9ec',
-    trNthChildEvenColor: '#006d77',
+    tbodyBg: '#343a40',
+    tbodyColor: '#d9ead7',
+    trNthChildEvenBg: '#495057',
+    trNthChildEvenColor: '#d9ead7',
   },
   dropdown: {
     background: '#252b31',

@@ -12,8 +12,8 @@ const Grid = styled.table`
 `
 
 const Head = styled.thead`
-  background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.grid.theadBg};
+  color: ${(props) => props.theme.grid.theadColor};
 `
 
 const Body = styled.tbody`
@@ -26,6 +26,13 @@ const Row = styled.tr`
     background-color: ${(props) => props.theme.grid.trNthChildEvenBg};
     color: ${(props) => props.theme.grid.trNthChildEvenColor};
   }
+`
+
+const CellHeader = styled.th`
+  padding: 0.8rem 0.5rem;
+  text-align: ${(props) => props.align};
+  text-align: center;
+  font-weight: normal;
 `
 
 const Cell = styled.td`
@@ -91,11 +98,11 @@ const ButtonEdit = styled(ButtonActs)`
 `
 
 const ButtonDelete = styled(ButtonActs)`
-  background-color: ${(props) => props.theme.colors.danger};
+  background-color: ${(props) => props.theme.colors.secondary};
   color: ${(props) => props.theme.colors.white};
 `
 const ButtonNew = styled(ButtonActs)`
-  background-color: ${(props) => props.theme.colors.danger};
+  background-color: ${(props) => props.theme.colors.secondary};
   color: ${(props) => props.theme.colors.white};
 `
 
@@ -110,6 +117,7 @@ export {
   Body,
   Row,
   Cell,
+  CellHeader,
   CellAction,
   Header,
   Title,

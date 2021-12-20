@@ -31,10 +31,10 @@ function UsersList() {
       <Grid.Grid>
         <Grid.Head>
           <Grid.Row>
-            <Grid.Cell>First Name</Grid.Cell>
-            <Grid.Cell>Last Name</Grid.Cell>
-            <Grid.Cell>Email</Grid.Cell>
-            <Grid.Cell />
+            <Grid.CellHeader>First Name</Grid.CellHeader>
+            <Grid.CellHeader>Last Name</Grid.CellHeader>
+            <Grid.CellHeader>Email</Grid.CellHeader>
+            <Grid.CellHeader />
           </Grid.Row>
         </Grid.Head>
         <Grid.Body>
