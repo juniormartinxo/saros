@@ -6,14 +6,14 @@ const dark: DefaultTheme = {
   colors: {
     primary: '#292c37',
     secondary: '#74788d',
-    success: '#34c38f',
+    success: '#006d77',
     info: '#50a5f1',
     warning: '#f1b44c',
     danger: '#f25f5c',
     light: '#74788d',
     dark: '#343a40',
     white: '#ffffff',
-    shadow: '#d8d8d8',
+    shadow: '#1c1d1f',
   },
   fonts: {
     primary: '"Fira Sans", sans-serif',

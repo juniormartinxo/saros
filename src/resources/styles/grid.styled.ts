@@ -93,12 +93,12 @@ const ButtonActs = styled.a`
 `
 
 const ButtonEdit = styled(ButtonActs)`
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.success};
   color: ${(props) => props.theme.colors.white};
 `
 
 const ButtonDelete = styled(ButtonActs)`
-  background-color: ${(props) => props.theme.colors.secondary};
+  background-color: ${(props) => props.theme.colors.danger};
   color: ${(props) => props.theme.colors.white};
 `
 const ButtonNew = styled(ButtonActs)`
