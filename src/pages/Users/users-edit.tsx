@@ -40,7 +40,9 @@ function UsersEdit() {
   return (
     <>
       <Container>
-        <Link to="/usuarios">Voltar</Link>
+        <Link to="/usuarios" skin="primary">
+          Voltar
+        </Link>
       </Container>
       <Container>
         <FormS.Form onSubmit={handleSubmit(onSubmit)}>
