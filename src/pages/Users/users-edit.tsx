@@ -40,7 +40,7 @@ function UsersEdit() {
   return (
     <>
       <Container>
-        <Link to="/usuarios" skin="primary">
+        <Link to="/usuarios" color="primary">
           Voltar
         </Link>
       </Container>

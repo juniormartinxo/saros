@@ -58,7 +58,9 @@ function UsersInsert() {
           <Form.Button type="submit">
             <IconSave h={16} /> Gravar
           </Form.Button>
-          <Link to="/usuarios">Voltar</Link>
+          <Link to="/usuarios" color="primary">
+            Voltar
+          </Link>
         </Form.ContainerButtons>
       </Form.Form>
     </Container>

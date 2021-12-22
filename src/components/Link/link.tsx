@@ -4,13 +4,13 @@ import LinkStyled from './link.styled'
 type LinkProps = {
   to: string
   target?: string
-  skin?: string
+  color: string
   children: ReactNode
 }
 
-function Link({ to, target, skin, children }: LinkProps) {
+function Link({ to, target, color, children }: LinkProps) {
   return (
-    <LinkStyled href={to} target={target} skin={skin}>
+    <LinkStyled href={to} target={target} color={color}>
       {children}
     </LinkStyled>
   )

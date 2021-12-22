@@ -14,7 +14,7 @@ addDecorator(withThemesProvider(themes))
 export default {
   title: 'Components/Link',
   component: Link,
-  decorators: [(story) => <LinkStyled skin="primary">{story()}</LinkStyled>],
+  decorators: [(story) => <LinkStyled color="primary">{story()}</LinkStyled>],
 } as ComponentMeta<typeof Link>
 
 const LinkTemplate: ComponentStory<typeof Link> = (args) => {

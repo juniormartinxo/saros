@@ -34,7 +34,9 @@ function TeachersEdit() {
   return (
     <>
       <Container>
-        <Link to="/professores">Voltar {id}</Link>
+        <Link to="/professores" color="primary">
+          Voltar {id}
+        </Link>
       </Container>
       <Container>
         <FormS.Form onSubmit={handleSubmit(onSubmit)}>
