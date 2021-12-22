@@ -4,7 +4,7 @@ const dark: DefaultTheme = {
   title: 'dark',
   version: '0.0.1',
   colors: {
-    primary: '#292c37',
+    primary: '#d9ead7', // '#292c37',
     secondary: '#74788d',
     success: '#006d77',
     info: '#50a5f1',
