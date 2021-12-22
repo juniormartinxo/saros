@@ -1,27 +1,38 @@
 import styled from 'styled-components/macro'
 
-const handleSkin = (color: string) => {
-  switch (color) {
-    case 'primary':
-      return `
-      background-color: ${(props: { theme: { colors: { success: any } } }) =>
-        props.theme.colors.success};
-      color: ${(props: { theme: { colors: { white: any } } }) =>
-        props.theme.colors.white};
-      `
-    case 'danger':
-      return '#f56342'
-    default:
-      return '#fff'
-  }
-}
-
-const LinkStyled = styled.a<{ color: string }>`
-  /*color: ${(props) => props.theme.colors.primary};*/
+const LinkStyled = styled.a`
   text-decoration: none;
   cursor: pointer;
   transition: color 0.2s ease-in-out;
-  ${(props) => handleSkin(props.color)}
+  padding: 0.5rem;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+  ${(props) => {
+    switch (props.color) {
+      case 'primary':
+        return `
+          background-color: ${props.theme.colors.primary};
+          color: ${props.theme.colors.white};
+        `
+      case 'danger':
+        return `
+          background-color: ${props.theme.colors.danger};
+          color: ${props.theme.colors.white};
+        `
+      case 'success':
+        return `
+          background-color: ${props.theme.colors.success};
+          color: ${props.theme.colors.white};
+        `
+      default:
+        return `
+          background-color: transparent;
+          color: ${props.theme.colors.primary};
+        `
+    }
+  }}
 `
 
 export default LinkStyled
