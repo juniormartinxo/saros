@@ -69,6 +69,8 @@ const Button = styled.button`
   cursor: pointer;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+  background-color: ${(props) => props.theme.colors.danger};
+  color: ${(props) => props.theme.colors.white};
 
   &:hover {
     transition: all 0.2s ease-in-out;
