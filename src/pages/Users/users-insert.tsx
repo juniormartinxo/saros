@@ -11,7 +11,6 @@ type IFormInputs = {
   iptFirstName: string
   iptLastName: string
   iptEmail: string
-  iptPassword: string
 }
 
 const schema = yup
@@ -19,7 +18,6 @@ const schema = yup
     iptFirstName: yup.string().required('O nome é obrigatório'),
     iptLastName: yup.string().required('O sobrenome é obrigatório'),
     iptEmail: yup.string().required('O email é obrigatório'),
-    iptPassword: yup.string().required('A senha é obrigatória'),
   })
   .required()
 
@@ -32,14 +30,22 @@ function UsersInsert() {
     resolver: yupResolver(schema),
   })
 
-  const onSubmit = (data: IFormInputs) => console.log(data)
+  // const onSubmit = (data: IFormInputs) => console.log(data)
+  const onSubmit = (data: IFormInputs) => {
+    console.log('data', data)
+  }
+
+  const onError = (error: any) => console.log('error', error)
 
   return (
     <Container>
-      <Form.Form onSubmit={handleSubmit(onSubmit)}>
+      <Form.Form onSubmit={handleSubmit(onSubmit, onError)}>
         <Form.Container>
           <Form.Label htmlFor="iptFirstName">Nome</Form.Label>
-          <Form.Input {...register('iptFirstName')} />
+          <Form.Input
+            {...register('iptFirstName')}
+            placeholder="Primeiro nome"
+          />
           <Form.Errors>{errors.iptFirstName?.message}</Form.Errors>
         </Form.Container>
 
@@ -59,6 +65,7 @@ function UsersInsert() {
           <Button type="submit" color="primary">
             <IconSave h={16} /> Gravar
           </Button>
+
           <Link href="/usuarios" color="danger">
             <IconCancel h={16} /> Cancelar
           </Link>
