@@ -49,6 +49,7 @@ const Input = styled.input`
 const Errors = styled.span`
   color: ${(props) => props.theme.colors.danger};
   font-size: 0.8rem;
+  margin-top: 0.5rem;
 `
 
 const Label = styled.label`

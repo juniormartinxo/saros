@@ -16,10 +16,10 @@ type IFormInputs = {
 
 const schema = yup
   .object({
-    iptFirstName: yup.string().required('ops_1'),
-    iptLastName: yup.string().required('ops_2'),
-    iptEmail: yup.string().required('ops_3'),
-    iptPassword: yup.string().required('ops_4'),
+    iptFirstName: yup.string().required('O nome é obrigatório'),
+    iptLastName: yup.string().required('O sobrenome é obrigatório'),
+    iptEmail: yup.string().required('O email é obrigatório'),
+    iptPassword: yup.string().required('A senha é obrigatória'),
   })
   .required()
 
