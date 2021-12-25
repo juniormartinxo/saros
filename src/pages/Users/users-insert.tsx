@@ -1,10 +1,11 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import * as Form from 'resources/styles/form.styled'
+import * as Form from 'resources/ui/packages/form.styled'
 import { Container } from 'components/Container'
-import { IconSave } from 'components/Icons'
-import { Link } from 'components/Link'
+import { IconSave, IconCancel } from 'components/Icons'
+import { Link } from 'resources/ui/packages/link.styled'
+import { Button } from 'resources/ui/packages/button.styled'
 
 type IFormInputs = {
   iptFirstName: string
@@ -55,11 +56,11 @@ function UsersInsert() {
         </Form.Container>
 
         <Form.ContainerButtons>
-          <Form.Button type="submit">
+          <Button type="submit" color="primary">
             <IconSave h={16} /> Gravar
-          </Form.Button>
-          <Link to="/usuarios" color="primary">
-            Voltar
+          </Button>
+          <Link href="/usuarios" color="danger">
+            <IconCancel h={16} /> Cancelar
           </Link>
         </Form.ContainerButtons>
       </Form.Form>

@@ -1,10 +1,10 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import * as FormS from 'resources/styles/form.styled'
+import * as FormS from 'resources/ui/packages/form.styled'
 import { Container } from 'components/Container'
 import { useParams } from 'react-router-dom'
-import { Link } from 'components/Link'
+import { Link } from 'resources/ui/packages/link.styled'
 import usersJson from 'users.json'
 
 type FormInputsProps = {
@@ -40,7 +40,7 @@ function UsersEdit() {
   return (
     <>
       <Container>
-        <Link to="/usuarios" color="">
+        <Link href="/usuarios" color="">
           Voltar
         </Link>
       </Container>

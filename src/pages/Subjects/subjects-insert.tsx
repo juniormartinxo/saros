@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
-import * as FormS from 'resources/styles/form.styled'
+import * as FormS from 'resources/ui/packages/form.styled'
 import { Container } from 'components/Container'
 
 type IFormInputs = {

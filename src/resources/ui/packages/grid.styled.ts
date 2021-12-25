@@ -102,7 +102,7 @@ const ButtonDelete = styled(ButtonActs)`
   color: ${(props) => props.theme.colors.white};
 `
 const ButtonNew = styled(ButtonActs)`
-  background-color: ${(props) => props.theme.colors.secondary};
+  background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.white};
 `
 

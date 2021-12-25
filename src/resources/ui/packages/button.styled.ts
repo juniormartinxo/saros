@@ -1,18 +1,29 @@
 import styled from 'styled-components/macro'
 
-const LinkStyled = styled.a`
-  text-decoration: none;
-  cursor: pointer;
+const borderRadius = '3px'
+
+const Button = styled.button`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: none;
+  border-radius: ${borderRadius};
   padding: 0.5rem;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  transition: all 0.2s ease-in-out;
   font-size: ${(props) => props.theme.fontSizes.small};
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  margin: 0 0.5rem;
 
   &:hover {
     transition: all 0.2s ease-in-out;
     filter: brightness(120%);
+  }
+
+  &:last-child {
+    margin-right: 0;
   }
 
   ${(props) => {
@@ -41,5 +52,4 @@ const LinkStyled = styled.a`
     }
   }}
 `
-
-export default LinkStyled
+export { Button }

@@ -6,7 +6,7 @@ const light: DefaultTheme = {
   colors: {
     primary: '#006d77',
     secondary: '#d9ead7',
-    success: '#34c38f',
+    success: '#006d77',
     info: '#50a5f1',
     warning: '#f1b44c',
     danger: '#f25f5c',

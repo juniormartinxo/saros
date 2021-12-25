@@ -1,4 +1,4 @@
-import * as Grid from 'resources/styles/grid.styled'
+import * as Grid from 'resources/ui/packages/grid.styled'
 import { Container } from 'components/Container'
 import { IconEdit, IconUserPlus } from 'components/Icons'
 
